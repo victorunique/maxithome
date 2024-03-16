@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async function(event) {
+export async function handler(event) {
     const { url } = event.queryStringParameters;
     const response = await fetch(url);
     const data = await response.text();
@@ -8,4 +8,4 @@ exports.handler = async function(event) {
         statusCode: 200,
         body: data
     };
-};
+}
