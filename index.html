@@ -10,11 +10,14 @@
 </head>
 <body>
     <div class="container">
-        <form id="urlForm" class="form-inline">
+        <label for="targetURL">The target URL: </label>
+        <input type="text" id="targetURL" placeholder="Enter URL here">
+        <button id="fetchBtn">Query</button>
+        <!--form id="urlForm" class="form-inline">
             <label for="targetURL" class="sr-only">The target URL: </label>
             <input type="text" id="targetURL" class="form-control mb-2 mr-sm-2" placeholder="Enter URL here" style="width: 100%;">
             <button id="fetchBtn" class="btn btn-primary mb-2" style="width: 100%;">Query</button>
-        </form>
+        </form-->
 	<iframe id="displayFrame"></iframe>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
