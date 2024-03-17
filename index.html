@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Fetch Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <label for="targetURL">The target URL: </label>
-    <input type="text" id="targetURL" placeholder="Enter URL here">
-    <button id="fetchBtn">Query</button>
-    <iframe id="displayFrame" style="width:100%; height:60vh;"></iframe>
+    <div class="container">
+        <form id="urlForm" class="form-inline">
+            <label for="targetURL" class="sr-only">The target URL: </label>
+            <input type="text" id="targetURL" class="form-control mb-2 mr-sm-2" placeholder="Enter URL here" style="width: 100%;">
+            <button id="fetchBtn" class="btn btn-primary mb-2" style="width: 100%;">Query</button>
+        </form>
+	<iframe id="displayFrame"></iframe>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

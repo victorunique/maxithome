@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    position: relative; /* Containing block for absolute positioning */
+    padding-bottom: 20px; /* Space at the bottom */
+    height: calc(100% - 40px); /* Full height minus padding and potential navbar or margins */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Space at the top and bottom */
+}
+
+.form-inline {
+    width: 100%;
+}
+
+#displayFrame {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 62px); /* Adjusted to the height of the form and the desired 20px bottom spacing */
+    bottom: 20px;
+    border: none;
+}
+
+/* Add styles for input and button if necessary */
+#targetURL, #fetchBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
