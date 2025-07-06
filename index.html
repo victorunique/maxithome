@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Fetch Website</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="main.js" defer></script>
+    <title>Livable Locations Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="form-group">
-            <label for="targetURL" class="mb-2">The target URL:</label>
-            <input type="text" id="targetURL" class="form-control mb-3" placeholder="Enter URL here">
-            <button id="fetchBtn" class="btn btn-primary mb-3">Query</button>
+    <div id="filter-panel">
+        <h2>Filters</h2>
+        <div class="filter-group">
+            <label for="education-filter">Good Education Systems:</label>
+            <input type="checkbox" id="education-filter" name="education" data-filter-property="education" data-filter-value="good">
         </div>
-        <iframe id="displayFrame" class="w-100" style="height: 500px;"></iframe>
+        <div class="filter-group">
+            <label for="cost-filter">Low Cost of Living:</label>
+            <input type="checkbox" id="cost-filter" name="cost" data-filter-property="cost_of_living" data-filter-value="low">
+        </div>
+        <div class="filter-group">
+            <label for="transport-filter">High-Speed Rail/Public Transport (Good+):</label>
+            <input type="checkbox" id="transport-filter" name="transport" data-filter-property="public_transport" data-filter-value="good">
+            <!-- Note: For "Good+", the JS logic will need to handle "good" or "excellent" -->
+        </div>
+        <div class="filter-group">
+            <label for="layer-select">Granularity:</label>
+            <select id="layer-select">
+                <option value="all" selected>All Levels</option>
+                <option value="countries">Countries Only</option>
+                <option value="regions">Regions Only</option>
+                <option value="cities">Cities Only</option>
+            </select>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="script.js"></script>
 </body>
 </html>
