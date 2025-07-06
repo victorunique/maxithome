@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Munich",
+        "region": "Bavaria",
+        "country": "Germany",
+        "education": "excellent",
+        "cost_of_living": "high",
+        "public_transport": "excellent"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.581981, 48.135125]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Toronto",
+        "country": "Canada",
+        "education": "good",
+        "cost_of_living": "high",
+        "public_transport": "good"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.3832, 43.6532]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "São Paulo City",
+        "region": "São Paulo State",
+        "country": "Brazil",
+        "education": "good",
+        "cost_of_living": "medium",
+        "public_transport": "good"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6333, -23.5505]
+      }
+    }
+  ]
+}
