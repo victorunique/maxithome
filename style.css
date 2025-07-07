@@ -1,25 +1,33 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%; /* Ensure html and body take full width */
     font-family: Arial, sans-serif;
-    display: flex; /* Use flexbox for layout */
+    overflow: hidden; /* Prevent scrollbars on html/body if children are exactly 100vh/100vw */
+}
+
+body {
+    display: flex;
+    /* height: 100%; is inherited, width: 100%; is inherited */
 }
 
 #filter-container {
-    width: 250px; /* Fixed width for the filter panel */
-    height: 100vh; /* Full viewport height */
+    width: 250px;
+    flex-shrink: 0; /* Prevent filter container from shrinking */
+    height: 100%; /* Use 100% to refer to parent body height */
     padding: 15px;
     background-color: #f0f0f0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    overflow-y: auto;
     box-sizing: border-box;
 }
 
 #map-container {
-    flex-grow: 1; /* Takes up the remaining space */
-    height: 100vh; /* Full viewport height */
-    background-color: #e0e0e0; /* Placeholder background, will be covered by map */
+    flex-grow: 1;
+    height: 100%; /* Use 100% to refer to parent body height */
+    min-width: 0; /* Crucial for flex items that need to shrink or grow properly */
+    background-color: #e0e0e0;
 }
 
 /* Basic styling for filter elements (can be expanded later) */
