@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "CAN",
+      "properties": {
+        "name": "Canada",
+        "education": "good",
+        "cost_of_living": "medium",
+        "public_transport": "good"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[-141.0, 41.7], [-141.0, 83.1], [-52.6, 83.1], [-52.6, 45.0], [-60.0, 45.0], [-60.0, 41.7], [-141.0, 41.7]]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "DEU",
+      "properties": {
+        "name": "Germany",
+        "education": "good",
+        "cost_of_living": "medium",
+        "public_transport": "excellent"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[5.9, 47.3], [5.9, 55.1], [15.0, 55.1], [15.0, 47.3], [5.9, 47.3]]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "JPN",
+      "properties": {
+        "name": "Japan",
+        "education": "excellent",
+        "cost_of_living": "high",
+        "public_transport": "excellent"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[122.9, 24.0], [122.9, 45.5], [145.8, 45.5], [145.8, 24.0], [122.9, 24.0]]
+        ]
+      }
+    }
+  ]
+}

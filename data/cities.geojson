@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "TOR",
+      "properties": {
+        "name": "Toronto",
+        "country_id": "CAN",
+        "region_id": "CAN-ON",
+        "education": "excellent",
+        "cost_of_living": "high",
+        "public_transport": "good"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.3832, 43.6532]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MUN",
+      "properties": {
+        "name": "Munich",
+        "country_id": "DEU",
+        "region_id": "DEU-BY",
+        "education": "excellent",
+        "cost_of_living": "high",
+        "public_transport": "excellent"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.5820, 48.1351]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "TKY",
+      "properties": {
+        "name": "Tokyo",
+        "country_id": "JPN",
+        "education": "excellent",
+        "cost_of_living": "high",
+        "public_transport": "excellent"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.6917, 35.6895]
+      }
+    }
+  ]
+}

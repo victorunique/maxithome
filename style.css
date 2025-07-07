@@ -1,27 +1,95 @@
-body, html {
-    height: 100%;
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%; /* Ensure html and body take full width */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars on html/body if children are exactly 100vh/100vw */
 }
 
-.container {
-    max-width: 600px;
-    position: relative; /* Containing block for positioning elements like the iframe */
-    padding-bottom: 20px; /* Space at the bottom for any additional elements or padding */
-    height: auto; /* Adjusted to auto to accommodate content size dynamically */
-    margin-top: 20px;
-    margin-bottom: 20px; /* Maintain vertical spacing around the container */
+body {
+    display: flex;
+    /* height: 100%; is inherited, width: 100%; is inherited */
 }
 
-label {
-    font-family: 'Arial', sans-serif; /* Modern, readable font */
-    font-size: 16px; /* Slightly larger font size for better readability */
-    color: #007bff; /* Bootstrap primary color, but you can choose any color */
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow for depth */
-    margin-bottom: .5rem; /* Ensure consistent margin below the label */
+#filter-container {
+    width: 250px;
+    flex-shrink: 0; /* Prevent filter container from shrinking */
+    height: 100%; /* Use 100% to refer to parent body height */
+    padding: 15px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-#displayFrame {
-    width: 100%; /* Ensure iframe takes the full container width */
-    height: 500px; /* Set a fixed height for consistency */
-    border: none; /* Remove the default border for a cleaner look */
+#map-container {
+    flex-grow: 1;
+    height: 100%; /* Use 100% to refer to parent body height */
+    min-width: 0; /* Crucial for flex items that need to shrink or grow properly */
+    background-color: #e0e0e0;
+}
+
+#filter-container h2 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#filter-container h3 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block; /* Or inline-block for side-by-side if desired */
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+#filter-container button {
+    display: inline-block;
+    width: calc(50% - 5px); /* Two buttons side-by-side with a small gap */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+#filter-container button#reset-filters-btn {
+    background-color: #6c757d;
+    margin-left: 5px;
+}
+
+#filter-container button:hover {
+    opacity: 0.9;
 }
