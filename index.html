@@ -1,493 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio of Victor Xu - IT Professional & AI Enthusiast">
-    <title>Victor Xu | IT Professional & Senior AI Enthusiast</title>
+    <meta name="description" content="Victor Xu's Portfolio - Brain Training & AI Era Tools">
+    <title>Victor Xu | Digital Playground & Portfolio</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- Apple Touch Icon-->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc; /* Slate 50 */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #2563eb, #4f46e5);
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(14, 165, 233, 0.3); /* Brand 500 */
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            pointer-events: none;
         }
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800">
+<body class="antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-slate-900">Victor<span class="text-blue-600">Xu</span></span>
+    <nav class="fixed w-full glass-nav z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20">
+                        V
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-white">Victor<span class="text-brand-500">Xu</span></span>
                 </div>
+                
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home"
-                            class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                        <a href="#about"
-                            class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a href="#portfolio"
-                            class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
-                        <a href="#skills"
-                            class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
-                        <a href="#interests"
-                            class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Interests</a>
-                        <a href="#contact"
-                            class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    <div class="flex items-center space-x-8">
+                        <a href="#apps" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Apps & Games</a>
+                        <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+                        <a href="#contact" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all backdrop-blur-sm border border-white/10">
+                            Contact Me
+                        </a>
                     </div>
                 </div>
+
                 <!-- Mobile menu button -->
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none">
+                <div class="md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-slate-300 hover:text-white">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
+
         <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50">About</a>
-                <a href="#portfolio"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50">Portfolio</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50">Skills</a>
-                <a href="#interests"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50">Interests</a>
-                <a href="#contact"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold">Contact</a>
+        <div class="hidden md:hidden bg-slate-900 border-t border-slate-800" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#apps" class="block py-3 text-base font-medium text-slate-300 hover:text-white">Apps & Games</a>
+                <a href="#about" class="block py-3 text-base font-medium text-slate-300 hover:text-white">About</a>
+                <a href="#contact" class="block py-3 text-base font-medium text-brand-500">Contact Me</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center lg:text-left lg:flex lg:items-center lg:justify-between">
-                <div class="lg:w-1/2">
-                    <div
-                        class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-4">
-                        <i class="fas fa-code-branch mr-2"></i> Open for opportunities
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="hero-glow animate-pulse-slow"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-medium mb-8 backdrop-blur-md">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-500 mr-2 animate-pulse"></span>
+                    Sharpen Your Mind in the AI Era
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                    Human Intelligence, <br>
+                    <span class="text-gradient">Augmented for Tomorrow</span>
+                </h1>
+                
+                <p class="mt-6 text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    A curated collection of cognitive tools and classic games designed to keep your neural networks firing. 
+                    Explore, play, and learn in a digital playground built by <strong class="text-slate-200">Victor Xu</strong>.
+                </p>
+
+                <div class="mt-12 flex justify-center gap-6">
+                    <a href="#apps" class="group relative px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-full font-bold text-white shadow-lg shadow-brand-500/25 transition-all hover:scale-105 flex items-center">
+                        Start Exploring
+                        <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decoration Elements -->
+        <div class="absolute top-1/4 left-10 w-24 h-24 bg-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 0s;"></div>
+        <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Apps & Games Section -->
+    <section id="apps" class="py-24 relative bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Learning Tools Category -->
+            <div class="mb-20">
+                <div class="flex items-end justify-between mb-10 border-b border-white/5 pb-4">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Learning Tools</h2>
+                        <p class="text-slate-400">Enhance your cognitive capabilities and skills.</p>
                     </div>
-                    <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6">
-                        Hi, I'm <span class="gradient-text">Victor Xu</span>
-                    </h1>
-                    <p class="mt-4 max-w-md mx-auto text-lg text-slate-500 sm:text-xl md:mt-5 md:max-w-3xl lg:mx-0">
-                        Seasoned IT Specialist | Solution Architect | AI Systems Integrator
+                    <div class="hidden sm:block text-2xl text-slate-700">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- FlashLearn -->
+                    <a href="flashlearn" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-orange-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-language text-2xl text-orange-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">FlashLearn</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Boost your vocabulary and memory with this interactive flashcard system.</p>
+                    </a>
+
+                    <!-- Maths Quest -->
+                    <a href="https://maxithome.com/maths_quest" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-cyan-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-calculator text-2xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Maths Quest</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Challenge your arithmetic speed and accuracy in a gamified environment.</p>
+                    </a>
+
+                    <!-- Herbert -->
+                    <a href="herbert" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-indigo-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-robot text-2xl text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Herbert</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">A programming puzzle game. Guide the robot using logic and commands.</p>
+                    </a>
+
+                    <!-- Word Search -->
+                    <a href="word_search" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-green-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-search text-2xl text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Word Search</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Enhance pattern recognition by finding hidden words in the grid.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Games Category -->
+            <div>
+                <div class="flex items-end justify-between mb-10 border-b border-white/5 pb-4">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Games Arcade</h2>
+                        <p class="text-slate-400">Classic puzzles and strategy games.</p>
+                    </div>
+                    <div class="hidden sm:block text-2xl text-slate-700">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Sudoku -->
+                    <a href="sudoku" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-blue-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-border-all text-2xl text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Sudoku</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">The classic number placement puzzle to train logic.</p>
+                    </a>
+
+                    <!-- Chess -->
+                    <a href="chess" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-yellow-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-chess text-2xl text-yellow-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Chess</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">The ultimate game of strategy and foresight.</p>
+                    </a>
+
+                    <!-- Gomoku -->
+                    <a href="gomoku" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-slate-700/50 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-circle text-2xl text-slate-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Gomoku</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Five-in-a-row. Simple rules, deep strategic possibilities.</p>
+                    </a>
+
+                    <!-- Jigsaw -->
+                    <a href="jigsaw" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-purple-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-puzzle-piece text-2xl text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Jigsaw</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Relaxing visual puzzles to assemble piece by piece.</p>
+                    </a>
+
+                    <!-- Uno -->
+                    <a href="uno" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-red-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-layer-group text-2xl text-red-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Uno</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Fast-paced card matching fun for everyone.</p>
+                    </a>
+
+                    <!-- Match-3 -->
+                    <a href="https://maxithome.com/match-3" target="_blank" class="block glass-card rounded-2xl p-6 group h-full">
+                        <div class="bg-pink-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-gem text-2xl text-pink-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Match-3</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Addictive pattern matching and puzzle solving.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About / Footer Section -->
+    <footer id="about" class="bg-slate-950 border-t border-slate-800 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Bio -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-500">
+                            <img src="personal_img.jpeg" alt="Victor Xu" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Victor Xu</h3>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        An IT Specialist, Solution Architect, and AI Enthusiast based in Ireland. 
+                        I build scalable cloud systems and explore the frontiers of Artificial Intelligence.
+                        This website serves as my digital laboratory and portfolio.
                     </p>
-                    <p class="mt-2 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:max-w-3xl lg:mx-0">
-                        I help organisations design scalable cloud-native systems and intelligent platforms.
-                        15+ years experience in cloud migration, data engineering, and enterprise transformation.
-                    </p>
-                    <div class="mt-10 flex justify-center lg:justify-start gap-4">
-                        <a href="#contact"
-                            class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 shadow-lg hover:shadow-blue-500/30 transition-all">
-                            Get in touch
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/victorunique" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all">
+                            <i class="fab fa-github"></i>
                         </a>
-                        <a href="#portfolio"
-                            class="px-8 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 md:py-4 md:text-lg md:px-10 transition-all">
-                            View Work
+                        <a href="https://www.linkedin.com/in/victorunique/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                    </div>
-                </div>
-                <!-- Hero Image / Illustration -->
-                <div class="mt-12 lg:mt-0 lg:w-1/2 flex justify-center">
-                    <div
-                        class="relative w-72 h-72 md:w-96 md:h-96 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
-                        <!-- Placeholder for User Image - Replace src with actual image -->
-                        <img src="personal_img.jpeg" alt="Victor Xu" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 text-lg text-slate-600">
-                    <p>
-                        I am an IT Specialist and Solution Architect with over 15 years of experience delivering
-                        cloud-native systems, data platforms, and enterprise integrations. I specialise in designing
-                        scalable architectures that bridge traditional infrastructure with intelligent, AI-enabled
-                        solutions.
-                    </p>
-                    <p>
-                        In recent years, I have been deeply advancing my expertise in artificial intelligence, with a
-                        strong focus on applied AI engineering, intelligent agents, and system-level integration. My
-                        work combines continuous learning with hands-on implementation, translating AI concepts into
-                        production-ready solutions that deliver real business value.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 card-hover">
-                        <i class="fas fa-book-reader text-3xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Education</h3>
-                        <p class="text-slate-600 text-sm">MSc. Computer Science - AI</p>
-                        <p class="text-slate-500 text-xs">University of Galway</p>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 card-hover">
-                        <i class="fas fa-briefcase text-3xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Experience</h3>
-                        <p class="text-slate-600 text-sm">15+ Years IT Industry</p>
-                        <p class="text-slate-500 text-xs">Cloud, Data, AI</p>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 card-hover">
-                        <i class="fas fa-map-marker-alt text-3xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Location</h3>
-                        <p class="text-slate-600 text-sm">Ireland</p>
-                        <p class="text-slate-500 text-xs"></p>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 card-hover">
-                        <i class="fas fa-users text-3xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Language</h3>
-                        <p class="text-slate-600 text-sm">English & Chinese</p>
-                        <p class="text-slate-500 text-xs"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio / Projects Section -->
-    <section id="portfolio" class="py-20 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Projects & Games</h2>
-                <p class="mt-4 text-slate-600">A collection of my personal projects and game implementations. For work
-                    projects, please check my <a href="https://availlogic.com" target="_blank"
-                        style="color: blue; text-decoration: none;">business site</a>.</p>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Sudoku -->
-                <a href="sudoku" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
-                            <i class="fas fa-border-all text-2xl text-blue-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Sudoku</h3>
-                        <p class="text-xs text-slate-500">Classic logic puzzle game</p>
-                    </div>
-                </a>
-
-                <!-- Jigsaw -->
-                <a href="jigsaw" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
-                            <i class="fas fa-puzzle-piece text-2xl text-purple-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Jigsaw</h3>
-                        <p class="text-xs text-slate-500">Visual puzzle challenge</p>
-                    </div>
-                </a>
-
-                <!-- Word Search -->
-                <a href="word_search" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
-                            <i class="fas fa-search text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Word Search</h3>
-                        <p class="text-xs text-slate-500">Find words in the grid</p>
-                    </div>
-                </a>
-
-                <!-- Uno -->
-                <a href="uno" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-100 transition-colors">
-                            <i class="fas fa-layer-group text-2xl text-red-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Uno</h3>
-                        <p class="text-xs text-slate-500">Popular card game</p>
-                    </div>
-                </a>
-
-                <!-- Gomoku -->
-                <a href="gomoku" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-slate-200 transition-colors">
-                            <i class="fas fa-circle text-2xl text-slate-700"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Gomoku</h3>
-                        <p class="text-xs text-slate-500">Five in a row strategy</p>
-                    </div>
-                </a>
-
-                <!-- Chess -->
-                <a href="chess" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-100 transition-colors">
-                            <i class="fas fa-chess text-2xl text-yellow-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Chess</h3>
-                        <p class="text-xs text-slate-500">Classic strategy game</p>
-                    </div>
-                </a>
-
-                <!-- Herbert -->
-                <a href="herbert" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-indigo-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition-colors">
-                            <i class="fas fa-robot text-2xl text-indigo-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Herbert</h3>
-                        <p class="text-xs text-slate-500">Programming puzzle</p>
-                    </div>
-                </a>
-
-                <!-- FlashLearn -->
-                <a href="flashlearn" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
-                            <i class="fas fa-language text-2xl text-orange-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">FlashLearn</h3>
-                        <p class="text-xs text-slate-500">Language learning tool</p>
-                    </div>
-                </a>
-
-                <!-- Match-3 Game -->
-                <a href="https://maxithome.com/match-3" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-pink-100 transition-colors">
-                            <i class="fas fa-gem text-2xl text-pink-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Match-3 Game</h3>
-                        <p class="text-xs text-slate-500">Classic match-3 puzzle</p>
-                    </div>
-                </a>
-
-                <!-- Maths Quest -->
-                <a href="https://maxithome.com/maths_quest" target="_blank" class="block group">
-                    <div
-                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 h-full flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-cyan-100 transition-colors">
-                            <i class="fas fa-calculator text-2xl text-cyan-600"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 mb-1">Maths Quest</h3>
-                        <p class="text-xs text-slate-500">Maths practice tool</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Technical Expertise</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skill Category 1 -->
-                <div class="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
-                        <i class="fas fa-cloud text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Cloud & DevOps</h3>
-                    <ul class="space-y-2 text-slate-600 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Cloud architecture design (AWS/Azure/GCP)
-                        </li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Infrastructure automation (Terraform, CI/CD)
-                        </li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>System reliability & performance
-                            optimization</li>
-                    </ul>
-                </div>
-                <!-- Skill Category 2 -->
-                <div class="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
-                        <i class="fas fa-database text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Data & AI</h3>
-                    <ul class="space-y-2 text-slate-600 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Data warehousing & modelling</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Big data pipelines (ETL / streaming)</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>AI/ML integration & deployment (MLOps)</li>
-                    </ul>
-                </div>
-                <!-- Skill Category 3 -->
-                <div class="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
-                        <i class="fab fa-java text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Development</h3>
-                    <ul class="space-y-2 text-slate-600 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Backend systems (Java/Python)</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>API & microservices</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Scalable distributed systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interests / YouTube Section -->
-    <section id="interests" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 shadow-xl text-white">
-                <div class="md:flex items-center justify-between">
-                    <div class="md:w-2/3 mb-8 md:mb-0">
-                        <h2 class="text-3xl font-bold mb-4">Immigration Research & Content Creation</h2>
-                        <p class="text-blue-100 text-lg mb-6">
-                            Beyond technology, I am deeply interested in researching and practicing immigration. I share
-                            hands-on experiences, policy analyses, and reflections on life abroad on my YouTube channel
-                            (Chinese language only).
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm">Policy
-                                Analysis</span>
-                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm">Life Abroad</span>
-                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm">Immigration
-                                Guide</span>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 flex justify-center md:justify-end">
-                        <a href="https://www.youtube.com/@yutianabroad" target="_blank"
-                            class="group relative inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition-all hover:scale-105 shadow-lg">
-                            <i class="fab fa-youtube text-2xl mr-3"></i>
-                            <span>Visit My Channel</span>
+                        <a href="mailto:victor.xu@availlogic.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white transition-all">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-slate-900 text-slate-300 py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Expertise -->
                 <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Victor Xu</h3>
-                    <p class="text-sm text-slate-400">
-                        IT Professional & Senior AI Enthusiast based in Ireland.
-                        <br>Specializing in Cloud, Big Data, and Artificial Intelligence.
-                    </p>
+                    <h4 class="text-white font-bold mb-6">Expertise</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-500 mt-1 mr-2"></i>
+                            <span>Cloud Architecture (AWS/Azure)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-500 mt-1 mr-2"></i>
+                            <span>AI & Machine Learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-500 mt-1 mr-2"></i>
+                            <span>Big Data & Analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-500 mt-1 mr-2"></i>
+                            <span>Full Stack Development</span>
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- Links -->
                 <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Connect</h3>
-                    <ul class="space-y-2">
+                    <h4 class="text-white font-bold mb-6">Content</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
                         <li>
-                            <a href="https://github.com/victorunique" target="_blank"
-                                class="hover:text-white transition-colors flex items-center">
-                                <i class="fab fa-github w-6"></i> GitHub
+                            <a href="https://availlogic.com" target="_blank" class="hover:text-brand-400 transition-colors">
+                                <i class="fas fa-building mr-2 text-slate-600"></i>Availlogic Business
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/victorunique/" target="_blank"
-                                class="hover:text-white transition-colors flex items-center">
-                                <i class="fab fa-linkedin w-6"></i> LinkedIn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:victor.xu@availlogic.com" target="_blank"
-                                class="hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-envelope w-6"></i> Email Me
+                            <a href="https://www.youtube.com/@yutianabroad" target="_blank" class="hover:text-red-400 transition-colors">
+                                <i class="fab fa-youtube mr-2 text-slate-600"></i>Immigration Channel
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
-                        <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
-                    </ul>
-                </div>
             </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-500">
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> Victor Xu. All rights reserved.
+
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-slate-600 text-sm">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Victor Xu. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple Smooth Scroll for Anchor Links
+        // Smooth scroll handling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                // Only scroll if the href points to an ID (starts with #) and isn't just "#"
-                const href = this.getAttribute('href');
-                if (href.startsWith('#') && href.length > 1) {
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
     </script>
 </body>
-
 </html>
