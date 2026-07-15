@@ -1,0 +1,212 @@
+[
+  {
+    "id": "flashlearn",
+    "name": "FlashLearn",
+    "subdomain": "https://victorunique.github.io/flashlearn",
+    "icon": "/icons/flashlearn.png",
+    "shortDescription": "Boost your vocabulary and memory with this interactive flashcard system.",
+    "longDescription": "FlashLearn is an interactive flashcard system designed to systematically boost your vocabulary retention and memory recall. By using active recall and spaced repetition concepts, it helps users internalize new terms, languages, or concepts efficiently.",
+    "howToUse": "1. Select a vocabulary deck or create your own custom flashcards.\n2. Read the prompt on the front of the card, then click to flip and reveal the answer.\n3. Rate your recall difficulty to optimize card review intervals.\n4. Practice daily to build long-term memory retention.",
+    "screenshots": [
+      "/screenshots/flashlearn-1.png",
+      "/screenshots/flashlearn-2.png"
+    ],
+    "featured": true,
+    "new": false,
+    "tags": {
+      "type": ["Learning", "Tool"],
+      "skills": ["Memory", "Language"],
+      "difficulty": ["Beginner", "Intermediate"],
+      "age": ["8+", "12+", "Adult", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "maths-quest",
+    "name": "Maths Quest",
+    "subdomain": "https://victorunique.github.io/maths_quest",
+    "icon": "/icons/maths-quest.png",
+    "shortDescription": "Challenge your arithmetic speed and accuracy in a gamified environment.",
+    "longDescription": "Maths Quest challenges your arithmetic speed, numerical agility, and calculation accuracy in a gamified quest environment. Solve increasingly complex math challenges under time pressure to sharpen your mental math capabilities.",
+    "howToUse": "1. Choose a difficulty level and operation type (addition, subtraction, multiplication, or division).\n2. Solve the equations displayed on screen as quickly as possible.\n3. Input your answers before the timer runs out to gain points and progress through levels.\n4. Review your accuracy dashboard at the end of each quest.",
+    "screenshots": [
+      "/screenshots/maths-quest-1.png",
+      "/screenshots/maths-quest-2.png"
+    ],
+    "featured": true,
+    "new": false,
+    "tags": {
+      "type": ["Game", "Learning"],
+      "skills": ["Mathematics", "Processing Speed"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
+      "age": ["8+", "12+"]
+    }
+  },
+  {
+    "id": "herbert",
+    "name": "Herbert",
+    "subdomain": "https://victorunique.github.io/herbert",
+    "icon": "/icons/herbert.png",
+    "shortDescription": "A programming puzzle game. Guide the robot using logic and commands.",
+    "longDescription": "Herbert is a programming puzzle game designed to exercise your logical thinking and executive planning functions. Guide a robot through complex mazes and obstacles by writing sequences of movement commands and loops.",
+    "howToUse": "1. Analyze the grid layout and the robot's target destination.\n2. Write a sequential list of commands (forward, turn left, turn right, loops) to define the robot's path.\n3. Click 'Run' to execute the instructions and watch the robot move.\n4. Optimize your code command length to achieve maximum star ratings.",
+    "screenshots": [
+      "/screenshots/herbert-1.png",
+      "/screenshots/herbert-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game", "Learning"],
+      "skills": ["Logic", "Reasoning", "Executive Function"],
+      "difficulty": ["Intermediate", "Advanced"],
+      "age": ["12+", "Adult"]
+    }
+  },
+  {
+    "id": "word-search",
+    "name": "Word Search",
+    "subdomain": "https://victorunique.github.io/word_search",
+    "icon": "/icons/word-search.png",
+    "shortDescription": "Enhance pattern recognition by finding hidden words in the grid.",
+    "longDescription": "Word Search is a classic word-finding puzzle designed to enhance visual search capabilities, focus, and spelling. Scan letter grids horizontally, vertically, or diagonally to locate hidden words matching the theme.",
+    "howToUse": "1. Select a theme or grid size to initialize the word search.\n2. Scan the letter grid to find words listed in the vocabulary panel.\n3. Click and drag across the letters to highlight and select a word.\n4. Find all words to complete the puzzle and track your time.",
+    "screenshots": [
+      "/screenshots/word-search-1.png",
+      "/screenshots/word-search-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Focus", "Attention", "Language"],
+      "difficulty": ["Beginner", "Intermediate"],
+      "age": ["8+", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "sudoku",
+    "name": "Sudoku",
+    "subdomain": "https://victorunique.github.io/sudoku",
+    "icon": "/icons/sudoku.png",
+    "shortDescription": "The classic number placement puzzle to train logic.",
+    "longDescription": "Sudoku is the world's most popular number placement puzzle. It challenges your deduction and reasoning skills. Fill the 9x9 grid so that each row, column, and 3x3 section contains all digits from 1 to 9 without repetition.",
+    "howToUse": "1. Choose a grid cell to input a number.\n2. Use logical elimination to determine which number fits based on the existing row, column, and box numbers.\n3. Use pencil marks/notes for cell candidates if unsure.\n4. Fill the entire board correctly without exceeding the permitted mistake limit.",
+    "screenshots": [
+      "/screenshots/sudoku-1.png",
+      "/screenshots/sudoku-2.png"
+    ],
+    "featured": true,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Logic", "Reasoning"],
+      "difficulty": ["Intermediate", "Advanced"],
+      "age": ["12+", "Adult", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "chess",
+    "name": "Chess",
+    "subdomain": "https://victorunique.github.io/chess",
+    "icon": "/icons/chess.png",
+    "shortDescription": "The ultimate game of strategy and foresight.",
+    "longDescription": "Chess is the ancient game of strategy, tactics, and cognitive foresight. Exercise spatial reasoning and decision-making capabilities by planning multi-step strategies, defending your king, and checkmating the opponent.",
+    "howToUse": "1. Select a piece to see its valid legal moves on the board.\n2. Take turns moving pieces to control the center, capture opponent pieces, and protect your own.\n3. Anticipate your opponent's response and plan your moves multiple turns in advance.\n4. Deliver checkmate to the opponent's king to win the game.",
+    "screenshots": [
+      "/screenshots/chess-1.png",
+      "/screenshots/chess-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Logic", "Executive Function", "Decision Making"],
+      "difficulty": ["Advanced"],
+      "age": ["12+", "Adult"]
+    }
+  },
+  {
+    "id": "gomoku",
+    "name": "Gomoku",
+    "subdomain": "https://victorunique.github.io/gomoku",
+    "icon": "/icons/gomoku.png",
+    "shortDescription": "Five-in-a-row. Simple rules, deep strategic possibilities.",
+    "longDescription": "Gomoku, also known as Five-in-a-Row, is a traditional abstract strategy board game. It challenges spatial visual skills and focus. Be the first player to place an unbroken line of five stones of your color horizontally, vertically, or diagonally.",
+    "howToUse": "1. Take turns placing a colored stone on any empty intersection on the grid.\n2. Attempt to create a consecutive sequence of five stones in a row.\n3. Actively block your opponent's growing lines of three or four stones.\n4. Form an open-ended line of stones to secure victory.",
+    "screenshots": [
+      "/screenshots/gomoku-1.png",
+      "/screenshots/gomoku-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Focus", "Attention", "Spatial"],
+      "difficulty": ["Beginner", "Intermediate"],
+      "age": ["8+", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "jigsaw",
+    "name": "Jigsaw",
+    "subdomain": "https://victorunique.github.io/jigsaw",
+    "icon": "/icons/jigsaw.png",
+    "shortDescription": "Relaxing visual puzzles to assemble piece by piece.",
+    "longDescription": "Jigsaw puzzles offer a relaxing cognitive workout for spatial reasoning, pattern recognition, and attention to detail. Piece together beautiful high-definition images by matching shapes, colors, and edges.",
+    "howToUse": "1. Select a puzzle image and set the number of puzzle pieces.\n2. Sort pieces by edge/border or color groups on the game board.\n3. Click and drag pieces, rotating if necessary, to connect them together.\n4. Assemble the complete picture to solve the puzzle.",
+    "screenshots": [
+      "/screenshots/jigsaw-1.png",
+      "/screenshots/jigsaw-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Spatial", "Attention", "Creativity"],
+      "difficulty": ["Beginner", "Intermediate"],
+      "age": ["8+", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "uno",
+    "name": "Uno",
+    "subdomain": "https://victorunique.github.io/uno",
+    "icon": "/icons/uno.png",
+    "shortDescription": "Fast-paced card matching fun for everyone.",
+    "longDescription": "Uno is a fast-paced card matching game that exercises visual processing speed, cognitive flexibility, and decision-making. Match cards by color or number, and play action cards strategically to empty your hand before other players.",
+    "howToUse": "1. Draw 7 cards to begin. A card is flipped from the draw pile.\n2. Match the top card of the discard pile by color, number, or symbol on your turn.\n3. Use action cards (Skip, Reverse, Draw Two, Wild) to disrupt opponent progress.\n4. Press the 'UNO' button when you have exactly one card left in your hand.",
+    "screenshots": [
+      "/screenshots/uno-1.png",
+      "/screenshots/uno-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Focus", "Processing Speed", "Decision Making"],
+      "difficulty": ["Beginner"],
+      "age": ["8+", "Senior Friendly"]
+    }
+  },
+  {
+    "id": "match-3",
+    "name": "Match-3",
+    "subdomain": "https://victorunique.github.io/match-3",
+    "icon": "/icons/match-3.png",
+    "shortDescription": "Addictive pattern matching and puzzle solving.",
+    "longDescription": "Match-3 puzzles challenge pattern recognition, spatial awareness, and planning skills. Swap adjacent gems on the grid to align lines of three or more identical shapes, triggering chain reactions and scoring combos.",
+    "howToUse": "1. Look for groups of similar gems on the board.\n2. Click and drag or tap two adjacent gems to swap their positions.\n3. Make swaps that create a row or column of 3 or more matching gems to clear them.\n4. Achieve target scores or clear specific obstacles within a limited number of moves.",
+    "screenshots": [
+      "/screenshots/match-3-1.png",
+      "/screenshots/match-3-2.png"
+    ],
+    "featured": false,
+    "new": false,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Spatial", "Attention", "Processing Speed"],
+      "difficulty": ["Beginner", "Intermediate"],
+      "age": ["8+", "Senior Friendly"]
+    }
+  }
+]
