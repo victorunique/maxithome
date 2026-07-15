@@ -208,5 +208,26 @@
       "difficulty": ["Beginner", "Intermediate"],
       "age": ["8+", "Senior Friendly"]
     }
+  },
+  {
+    "id": "block-craft",
+    "name": "BlockCraft",
+    "subdomain": "https://block-craft.maxithome.com/",
+    "icon": "/icons/block-craft.png",
+    "shortDescription": "Explore, build, and survive in this browser-native 3D voxel sandbox game.",
+    "longDescription": "BlockCraft is a browser-native 3D voxel sandbox game designed to deliver a high-quality, frictionless single-player survival and building experience. Featuring procedural world generation, a core survival/crafting loop, animal and monster entities with basic AI, and automatic local saving, it runs entirely in the client browser with zero install or account fatigue.",
+    "howToUse": "1. Select 'New Game' from the menu and choose your world size and difficulty.\n2. Use W/A/S/D to move, Space to jump, and Shift to sneak.\n3. Left-click to destroy/mine blocks and collect resources.\n4. Right-click to place the selected block from your hotbar.\n5. Press E to open your inventory/crafting screen to craft tools, items, and structures.",
+    "screenshots": [
+      "/screenshots/block-craft-1.png",
+      "/screenshots/block-craft-2.png"
+    ],
+    "featured": true,
+    "new": true,
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Spatial", "Logic", "Creativity", "Decision Making"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
+      "age": ["8+", "12+", "Adult"]
+    }
   }
 ]
