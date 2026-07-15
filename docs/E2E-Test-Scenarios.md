@@ -46,7 +46,7 @@ This specification document outlines End-to-End (E2E) testing scenarios for Maxi
     *   *Verification:* Heart icon changes from outlined to solid colored. Browser `LocalStorage` key `maxithome_favorites` contains `"flashlearn"`.
 4.  **Action - Tab Navigation Carousel:** User clicks the "Next" button in the gallery carousel.
     *   *Verification:* Slideshow shifts horizontally to reveal the second screenshot. Alt tags load dynamically.
-5.  **Action - Launching Redirect:** User clicks the primary CTA button "Enter App".
+5.  **Action - Launching Redirect:** User clicks the primary CTA button "Launch App".
     *   *Verification:* Browser opens a new tab (`target="_blank"`, `rel="noopener noreferrer"`) loading `https://victorunique.github.io/flashlearn`. The main MaxitHome aggregator page remains active in the original tab. Custom analytics hook `trackAppLaunch` logs the event details.
 6.  **Action - State Retention on Return:** User returns to the MaxitHome tab and clicks "← Back to Directory".
     *   *Verification:* Router returns user to the `/` root, preserving previously applied search/filter inputs and grid scroll location.

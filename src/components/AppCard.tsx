@@ -83,7 +83,7 @@ export const AppCard: React.FC<AppCardProps> = ({
           rel="noopener noreferrer"
           className="flex items-center justify-center space-x-1.5 px-4 py-3 bg-warm-accent-light dark:bg-warm-accent-dark text-sm font-bold text-white dark:text-warm-bg-dark rounded-full hover:scale-105 active:scale-95 shadow-md hover:shadow-lg transition-all duration-200"
         >
-          <span>Play</span>
+          <span>Launch</span>
           <ExternalLink className="w-3.5 h-3.5" />
         </a>
       </div>

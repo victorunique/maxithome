@@ -247,7 +247,7 @@ To prevent context loss, secure external links, and ensure user retention:
       target="_blank" 
       rel="noopener noreferrer"
     >
-      Enter App
+      Launch App
     </a>
     ```
 2.  **Safety Notice:** To satisfy FTC transparency guidelines regarding outcomes:

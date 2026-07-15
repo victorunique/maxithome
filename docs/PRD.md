@@ -72,12 +72,12 @@ MaxitHome aims to be the **"Product Hunt for Cognitive Training"** by aligning w
 3.  **Filtering:** User selects "Memory" from the Cognitive Skills filter list.
 4.  **Reviewing Details:** User clicks "Details" on an app card (e.g., "FlashLearn") to read the instructions, screenshots, and age recommendations without leaving the platform.
 5.  **Bookmarking:** User clicks "Save to Favorites" (adds the app to their LocalStorage-backed list).
-6.  **Launching:** User clicks "Enter App" and is redirected to `https://flashlearn.maxithome.com` (or open in a new tab).
+6.  **Launching:** User clicks "Launch App" and is redirected to `https://flashlearn.maxithome.com` (or open in a new tab).
 
 ### Journey 2: Accessing Saved Favorites (Returning User)
 1.  **Entry:** User visits MaxitHome.
 2.  **Navigation:** User navigates to the "My Favorites" section at the top of the homepage or in the navigation bar.
-3.  **Access:** The user sees their bookmarked apps instantly loaded from local storage and clicks "Enter App" directly to launch one.
+3.  **Access:** The user sees their bookmarked apps instantly loaded from local storage and clicks "Launch" or "Launch App" directly to launch one.
 
 ---
 
@@ -110,7 +110,7 @@ MaxitHome aims to be the **"Product Hunt for Cognitive Training"** by aligning w
     *   App Icon, Name, and Quick Tags.
     *   Long Description and "How to Use" instructions.
     *   Image/Screenshot Gallery.
-    *   Launch redirect button ("Enter App") and Bookmark toggle.
+    *   Launch redirect button ("Launch App") and Bookmark toggle.
     *   "Related Apps" section (displaying other apps sharing similar skill tags).
 
 ### 11.4 No-Auth Favorites
@@ -185,7 +185,7 @@ MaxitHome aims to be the **"Product Hunt for Cognitive Training"** by aligning w
 ## 18. Acceptance Criteria
 *   **AC-1:** Adding a new JSON object to `apps.json` immediately populates it on the home screen, detail pages, search indexing, and filtering menus without code modifications.
 *   **AC-2:** Searching and selecting multiple tags displays only the matching apps.
-*   **AC-3:** Clicking Details page loads instruction texts and screenshots corresponding to the app ID, and clicking "Enter App" redirects to the subdomain in a new tab.
+*   **AC-3:** Clicking Details page loads instruction texts and screenshots corresponding to the app ID, and clicking "Launch App" redirects to the subdomain in a new tab.
 *   **AC-4:** Bookmarked apps remain listed on reload, even in offline mode.
 *   **AC-5:** Lighthouse Accessibility (a11y) audit score is >= 95.
 

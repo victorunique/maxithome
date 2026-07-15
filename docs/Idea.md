@@ -226,7 +226,7 @@ apps.json
 - 名称
 - 一句话简介
 - Tags
-- Enter App 按钮
+- Launch 按钮
 - Details 按钮
 
 例如：
@@ -240,7 +240,7 @@ Game
 Spatial
 Logic
 
-[ Enter App ]
+[ Launch ]
 
 [ Details ]
 ```
@@ -359,7 +359,7 @@ apps.json
 - 使用方法
 - Screenshot Gallery
 - 收藏按钮
-- Enter App 按钮
+- Launch App 按钮
 - Related Apps
 
 新增 App 时无需增加新的 React 页面。

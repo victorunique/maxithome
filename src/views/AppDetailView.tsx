@@ -140,7 +140,7 @@ export const AppDetailView: React.FC<AppDetailViewProps> = ({
                   rel="noopener noreferrer"
                   className="flex-grow md:flex-grow-0 flex items-center justify-center space-x-2 px-8 py-4 bg-warm-accent-light dark:bg-warm-accent-dark text-white dark:text-warm-bg-dark font-bold rounded-full shadow-lg shadow-warm-accent-light/20 dark:shadow-warm-accent-dark/20 hover:scale-105 active:scale-95 transition-all duration-200"
                 >
-                  <span>Enter App</span>
+                  <span>Launch App</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>

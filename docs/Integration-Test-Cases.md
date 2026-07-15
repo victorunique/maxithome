@@ -95,7 +95,7 @@ This specification document outlines integration test scenarios to validate syst
 *   **Endpoint:** Custom event function `trackAppLaunch`
 *   **Test Case ID:** IT-ANALYTICS-01
 *   **Description:** Validate that outbound click tracking correctly passes events to Cloudflare Analytics.
-*   **Input Data:** Click event on the "Enter App" button for `"flashlearn"` targeting `https://victorunique.github.io/flashlearn`.
+*   **Input Data:** Click event on the "Launch App" button for `"flashlearn"` targeting `https://victorunique.github.io/flashlearn`.
 *   **Validation Steps:**
     1. Intercept the custom tracking event wrapper.
     2. Check parameters sent to `(window as any).cf`.

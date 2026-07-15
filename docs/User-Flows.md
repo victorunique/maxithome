@@ -74,7 +74,7 @@ graph TD
     4.  **Branching Logic (Bookmarking):**
         *   *If not favorited:* The app ID is appended to the `favorites` array in `LocalStorage`. The button state updates instantly to a solid colored heart (success animation).
         *   *If already favorited:* The app ID is removed from the `favorites` array. The button state returns to an outlined heart.
-    5.  User clicks the **"Enter App"** button to launch the tool.
+    5.  User clicks the **"Launch App"** button to launch the tool.
     6.  **Branching Logic (Launching):**
         *   The link opens in a new browser tab (`target="_blank"`) pointing to the app's subdomain/URL (e.g., `https://victorunique.github.io/flashlearn`), isolating the aggregator from the app's logic.
     7.  **Success Outcome:** The application is successfully bookmarked and launched in a new tab while the MaxitHome portal remains open in the original tab.
@@ -92,7 +92,7 @@ graph TD
     E --> F{User clicks Heart Toggle?}
     F -->|Favorited| G[Add ID to LocalStorage array & Animate State]
     F -->|Unfavorited| H[Remove ID from LocalStorage array & Reset State]
-    E --> I{User clicks 'Enter App'?}
+    E --> I{User clicks 'Launch App'?}
     I --> J[Open subdomain link in new browser tab target='_blank']
 ```
 
@@ -109,7 +109,7 @@ graph TD
     3.  **Branching Logic:**
         *   *Favorites list not empty:* The grid filters down to only show the app cards whose IDs are present in the `LocalStorage` favorites array.
         *   *Favorites list empty:* The grid displays an empty state: "You haven't saved any apps yet! Browse the directory and click the heart icon to save."
-    4.  **Success Outcome:** Arthur sees his Sudoku card immediately, clicks "Enter App", and launches it in a new tab.
+    4.  **Success Outcome:** Arthur sees his Sudoku card immediately, clicks "Launch", and launches it in a new tab.
     5.  **Cancellation Path:** Turning off the "Favorites Only" toggle restores the full application grid.
     6.  **Offline Capability:** Since all data comes from a local `apps.json` cache and bookmarks come from `LocalStorage`, this entire favorites view is fully functional even if the user is offline.
 
@@ -121,7 +121,7 @@ graph TD
     C -->|No| E[Display regular app grid]
     D -->|Yes| F[Display Empty Favorites Screen]
     D -->|No| G[Filter grid to display only favorited App Cards]
-    G --> H[Click 'Enter App' on card -> Launches in target='_blank']
+    G --> H[Click 'Launch' on card -> Launches in target='_blank']
 ```
 
 ---

@@ -180,7 +180,7 @@ This specification document outlines functional test cases at the UI and feature
 *   **Preconditions:** User is navigating via keyboard.
 *   **Steps:**
     1. Tab to an App Card.
-    2. Tab to the "Enter App" button.
+    2. Tab to the "Launch" button.
     3. Press Enter.
 *   **Expected Result:** Focus outlines are clearly visible. Pressing Enter triggers a browser redirection to the app subdomain (e.g., `https://sudoku.maxithome.com`) opening in a new tab (`target="_blank"`), leaving the aggregator page open.
 *   **Priority:** Critical

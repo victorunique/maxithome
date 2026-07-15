@@ -68,7 +68,7 @@ This document outlines the screen specifications, layouts, interactive component
     *   *Short Description:* Max 120 characters.
     *   *Tag Badges:* Visual pills representing skills, difficulty, and age.
     *   *Favorite Heart Toggle:* Large, responsive heart button (target: 48x48px).
-    *   *Enter App CTA (Primary):* Solid button linking to the subdomain, opens in a new tab.
+    *   *Launch CTA (Primary):* Solid button linking to the subdomain, opens in a new tab.
     *   *Details CTA (Secondary):* Outlined button routing to `/apps/:id`.
 *   **States:**
     *   *Default:* Soft sand card outline.
@@ -94,7 +94,7 @@ This document outlines the screen specifications, layouts, interactive component
 
 ### 2.2 Layout
 *   **Top Bar:** Contains a "← Back to Directory" button preserving active filter state.
-*   **Hero Header:** Split view with large App Icon, Title, quick stats (Difficulty, Age, Type), and primary CTA buttons ("Enter App" and "Favorite Toggle").
+*   **Hero Header:** Split view with large App Icon, Title, quick stats (Difficulty, Age, Type), and primary CTA buttons ("Launch App" and "Favorite Toggle").
 *   **Main Grid (2-column layout):**
     *   *Left Column:* Screenshot Gallery Carousel, Long Description, and "How to Use" step-by-step instructions.
     *   *Right Column:* Specifications panel (Developer details, last updated, tags list) and a "Related Apps" card section.
@@ -110,7 +110,7 @@ This document outlines the screen specifications, layouts, interactive component
 *   **Accessibility:** Arrows must support keyboard control (`Left`/`Right` arrow keys). Every image includes detailed `alt` tags.
 
 #### 2.3.2 Action CTA Group
-*   **Primary CTA ("Enter App"):** Large warm-colored button. Triggers a new tab (`target="_blank"`) to launch the subdomain.
+*   **Primary CTA ("Launch App"):** Large warm-colored button. Triggers a new tab (`target="_blank"`) to launch the subdomain.
 *   **Favorite Button:** Toggles the heart state and synchronizes with `LocalStorage` arrays.
 *   **Disclaimers:** Displays FTC compliance disclaimer adjacent to the primary CTA: *"This tool is designed to challenge cognitive skills; it does not claim to cure or prevent cognitive decline."*
 

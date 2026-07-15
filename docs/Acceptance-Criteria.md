@@ -45,7 +45,7 @@ This specification document outlines the formal, deterministic Acceptance Criter
     *   A horizontal sliding Screenshot Gallery Carousel.
     *   An outcome claims disclaimer complying with FTC guidelines.
     *   A "Related Apps" sidebar containing up to 3 apps with the highest overlap of cognitive skill tags.
-*   **AC-3.2 (Outbound Redirection Security):** Clicking the primary CTA button "Enter App" must redirect the user to the destination subdomain. The link must open in a new browser tab (`target="_blank"`) and contain security attributes `rel="noopener noreferrer"`.
+*   **AC-3.2 (Outbound Redirection Security):** Clicking the primary CTA button "Launch App" must redirect the user to the destination subdomain. The link must open in a new browser tab (`target="_blank"`) and contain security attributes `rel="noopener noreferrer"`.
 *   **AC-3.3 (Invalid ID Handling):** Navigating directly to a URL parameter `:id` that is not present in `apps.json` must redirect the user to a styled 404 page.
 *   **AC-3.4 (State Preservation):** Clicking the "← Back to Directory" navigation link must return the user to the `/` root, restoring the exact filter states and grid scroll position active before entering the details page.
 

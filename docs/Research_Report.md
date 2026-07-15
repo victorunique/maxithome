@@ -80,7 +80,7 @@ The cognitive training and brain health application market is expanding rapidly 
 ---
 
 ## Business Risks
-*   **User Retention:** A client-side portal with redirect links risks high bounce rates once the user clicks "Enter App" to navigate to a subdomain.
+*   **User Retention:** A client-side portal with redirect links risks high bounce rates once the user clicks "Launch App" to navigate to a subdomain.
 *   **Monetization & Scalability:** Maintaining a zero-cost static model limits revenue generation (which may require future transition to premium ads, affiliate directories, or platform memberships).
 
 ---

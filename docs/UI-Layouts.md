@@ -70,14 +70,14 @@ graph TD
 |  | [ ] Cognitive Skill |  | | App Name         |  | App Name         |   |  |
 |  |   [x] Memory        |  | | Short Desc       |  | Short Desc       |   |  |
 |  |   [ ] Focus         |  | | [Tags List]      |  | [Tags List]      |   |  |
-|  |                     |  | | [Details] [Play] |  | [Details] [Play] |   |  |
+|  |                     |  | | [Details] [Launch] |  | [Details] [Launch] |   |  |
 |  | [ ] Difficulty      |  | +------------------+  +------------------+   |  |
 |  |   [ ] Beginner      |  | +------------------+  +------------------+   |  |
 |  |                     |  | | Icon    [Heart]  |  | Icon    [Heart]  |   |  |
 |  | [ ] Recommended Age |  | | App Name         |  | App Name         |   |  |
 |  |   [ ] 8+            |  | | Short Desc       |  | Short Desc       |   |  |
 |  |                     |  | | [Tags List]      |  | [Tags List]      |   |  |
-|  +---------------------+  | | [Details] [Play] |  | [Details] [Play] |   |  |
+|  +---------------------+  | | [Details] [Launch] |  | [Details] [Launch] |   |  |
 |                           | +------------------+  +------------------+   |  |
 |                           +----------------------------------------------+  |
 +-----------------------------------------------------------------------------+
@@ -102,7 +102,7 @@ graph TD
 |  | | App Name                          | | |
 |  | | Short Desc                        | | |
 |  | | [Tags List]                       | | |
-|  | | [ Details ]        [ Enter App ]  | | |
+|  | | [ Details ]        [ Launch ]     | | |
 |  | +-----------------------------------+ | |
 |  +---------------------------------------+ |
 |                                            |
@@ -144,10 +144,10 @@ graph TD
 |  +-----------------------------------+  +---------------------------------+  |
 |  | SCREENSHOT GALLERY / CAROUSEL      |  | QUICK ACTION SUMMARY            |  |
 |  | +-------------------------------+  |  +---------------------------------+  |
-|  | |                               |  |  | Click Enter App to launch      |  |
+|  | |                               |  |  | Click Launch App to launch     |  |
 |  | |         Screenshot #1         |  |  | Flashcard system.               |  |
 |  | |                               |  |  |                                 |  |
-|  | +-------------------------------+  |  |        [ ENTER APP ]            |  |
+|  | +-------------------------------+  |  |        [ LAUNCH APP ]           |  |
 |  |    < (Prev)   (Dots)   Next >      |  |  |                                 |  |
 |  |                                   |  |  | *Opens subdomain in a new tab.  |  |
 |  | DESCRIPTION                       |  |  +---------------------------------+  |
@@ -159,10 +159,10 @@ graph TD
 |  | 2. Click cards to reveal answer.  |  |                                 |  |
 |  | 3. Grade recall difficulty.       |  | RELATED COGNITIVE APPS          |  |
 |  +-----------------------------------+  | +-----------------------------+ |  |
-|                                         | | Icon  Maths Quest     [Play]| |  |
+|                                         | | Icon  Maths Quest   [Details]| |  |
 |                                         | +-----------------------------+ |  |
 |                                         | +-----------------------------+ |  |
-|                                         | | Icon  Herbert         [Play]| |  |
+|                                         | | Icon  Herbert       [Details]| |  |
 |                                         | +-----------------------------+ |  |
 |                                         +---------------------------------+  |
 +-----------------------------------------------------------------------------+
