@@ -107,8 +107,8 @@ graph TD
     InputRaw[Raw apps.json Catalog] --> FilterFaves[Step 1: Check Favorites Toggle]
     FilterFaves --> FilterSearch[Step 2: String Query Token Matching]
     FilterSearch --> FilterDims[Step 3: Multi-Dimensional Tag Filters]
-    FilterDims --> SortedResults[Step 4: Sort by Featured & New]
-    SortedResults --> UI[Render Cards Grid]
+    FilterDims --> UserSort[Step 4: User-Controlled Sort]
+    UserSort --> UI[Render Cards Grid]
 ```
 
 ### 3.1 Multi-Dimensional Filtering Logic
@@ -180,3 +180,17 @@ export function filterCatalog(
   });
 }
 ```
+
+### 3.2 User-Controlled Sort Options
+
+After filtering, results are sorted based on the user's selected sort option from the Sort Dropdown:
+
+| Sort Option | Key | Logic |
+|---|---|---|
+| Default | `default` | Preserves original `apps.json` catalog order |
+| Name (A → Z) | `name-asc` | Alphabetical ascending by `name` field |
+| Name (Z → A) | `name-desc` | Alphabetical descending by `name` field |
+| Recently Updated | `date-newest` | Descending by `updatedAt` ISO date field |
+| Oldest First | `date-oldest` | Ascending by `createdAt` ISO date field |
+
+The sort function (`sortCatalog`) is a pure function that creates a new sorted array without mutating the input. It operates on the already-filtered subset of apps.

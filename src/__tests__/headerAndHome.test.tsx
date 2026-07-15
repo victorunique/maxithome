@@ -34,6 +34,8 @@ const mockCatalog: CognitiveApp[] = [
     longDescription: 'Logical deduction workout.',
     howToUse: 'Fill cells',
     screenshots: [],
+    createdAt: '2025-03-01',
+    updatedAt: '2026-05-20',
     tags: {
       type: ['Game'],
       skills: ['Logic'],

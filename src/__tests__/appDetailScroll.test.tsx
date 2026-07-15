@@ -18,6 +18,8 @@ const mockCatalog: CognitiveApp[] = [
     longDescription: 'Logical deduction workout.',
     howToUse: 'Fill cells',
     screenshots: [],
+    createdAt: '2025-03-01',
+    updatedAt: '2026-05-20',
     tags: {
       type: ['Game'],
       skills: ['Logic'],
@@ -34,6 +36,8 @@ const mockCatalog: CognitiveApp[] = [
     longDescription: 'Creative building block craft.',
     howToUse: 'Place blocks',
     screenshots: [],
+    createdAt: '2026-07-10',
+    updatedAt: '2026-07-15',
     tags: {
       type: ['Game'],
       skills: ['Logic'],

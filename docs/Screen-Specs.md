@@ -45,7 +45,22 @@ This document outlines the screen specifications, layouts, interactive component
     *   *Disabled:* Dimmed state if no apps in the catalog match this tag (dynamic disabling).
 *   **Accessibility:** Fully keyboard navigability (`Tab` to move, `Space` to toggle, reads `aria-checked`).
 
-#### 1.3.3 App Card
+#### 1.3.3 Sort Dropdown
+*   **Purpose:** Allows users to reorder the app card grid by various criteria.
+*   **Options:**
+    *   *Default:* Preserves the original catalog order from `apps.json`.
+    *   *Name (A → Z):* Alphabetical ascending sort by app name.
+    *   *Name (Z → A):* Alphabetical descending sort by app name.
+    *   *Recently Updated:* Sort by `updatedAt` date descending (newest first).
+    *   *Oldest First:* Sort by `createdAt` date ascending (oldest first).
+*   **Behaviour:** Selecting a sort option immediately reorders the card grid. Sorting is applied after search and filter operations on the filtered subset.
+*   **States:**
+    *   *Default:* Displays "Default" as the selected label.
+    *   *Active:* Displays the selected sort option label.
+    *   *Reset:* Clicking the "Reset All" button in the Filter Panel or the "Reset All Filters" button in the Empty State also resets the sort option to "Default".
+*   **Accessibility:** Fully keyboard navigable (`Tab` to focus, `Enter`/`Space` to open, `Arrow` keys to navigate options).
+
+#### 1.3.4 App Card
 *   **Purpose:** Displays high-level info about a specific cognitive app.
 *   **Properties:**
     *   *App Icon:* Located top-left, decorative, must have descriptive `alt` attribute.

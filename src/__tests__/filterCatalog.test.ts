@@ -13,6 +13,8 @@ const mockCatalog: CognitiveApp[] = [
     longDescription: 'Active recall language builder.',
     howToUse: 'Flip cards',
     screenshots: [],
+    createdAt: '2025-01-15',
+    updatedAt: '2026-03-10',
     tags: {
       type: ['Learning', 'Tool'],
       skills: ['Memory', 'Language'],
@@ -29,6 +31,8 @@ const mockCatalog: CognitiveApp[] = [
     longDescription: 'Logical deduction workout.',
     howToUse: 'Fill cells',
     screenshots: [],
+    createdAt: '2025-03-01',
+    updatedAt: '2026-05-20',
     tags: {
       type: ['Game'],
       skills: ['Logic', 'Reasoning'],

@@ -37,5 +37,7 @@ export interface CognitiveApp {
   officialWebsite?: string;
   featured?: boolean;
   new?: boolean;
+  createdAt: string;
+  updatedAt: string;
   tags: AppTags;
 }

@@ -61,7 +61,7 @@ graph TD
 |                     A curated repository of cognitive apps.                 |
 |                                                                             |
 |  +---------------------+  +----------------------------------------------+  |
-|  | FILTER PANEL        |  | [ Search cognitive apps...                 ] |  |
+|  | FILTER PANEL        |  | [ Search cognitive apps...           ] [Sort▾] |  |
 |  +---------------------+  +----------------------------------------------+  |
 |  | [ ] Type            |  | Active Filters: [Game x] [Memory x]          |  |
 |  |   [x] Game          |  +----------------------------------------------+  |
@@ -93,6 +93,7 @@ graph TD
 |  HUMAN INTELLIGENCE, AUGMENTED             |
 |  +---------------------------------------+ |
 |  | [ Search cognitive apps...          ] | |
+|  | [Sort ▾ Default            ]          | |
 |  +---------------------------------------+ |
 |  | Active Filters: [Game x]              | |
 |  +---------------------------------------+ |

@@ -1,12 +1,22 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X, SlidersHorizontal } from 'lucide-react';
+import { Search, X, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import type { CognitiveApp } from '../types';
 import { AppCard } from '../components/AppCard';
 import { FilterPanel } from '../components/FilterPanel';
 import { filterCatalog } from '../utils/filterCatalog';
 import type { FilterState } from '../utils/filterCatalog';
+import { sortCatalog } from '../utils/sortCatalog';
+import type { SortOption } from '../utils/sortCatalog';
+
+const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: 'default', label: 'Default' },
+  { value: 'name-asc', label: 'Name (A → Z)' },
+  { value: 'name-desc', label: 'Name (Z → A)' },
+  { value: 'date-newest', label: 'Recently Updated' },
+  { value: 'date-oldest', label: 'Oldest First' },
+];
 
 interface HomeViewProps {
   catalog: CognitiveApp[];
@@ -38,6 +48,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
     ...DEFAULT_FILTERS,
     showFavoritesOnly,
   });
+  const [sortOption, setSortOption] = useState<SortOption>('default');
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   // Sync favorites only toggle from props
@@ -84,12 +95,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
     setFilters({ ...DEFAULT_FILTERS, showFavoritesOnly: false });
     setShowFavoritesOnly(false);
     setSearchQuery('');
+    setSortOption('default');
   };
 
-  // Filtered applications
+  // Filtered and sorted applications
   const filteredApps = useMemo(() => {
-    return filterCatalog(catalog, filters, searchQuery, favorites);
-  }, [catalog, filters, searchQuery, favorites]);
+    const filtered = filterCatalog(catalog, filters, searchQuery, favorites);
+    return sortCatalog(filtered, sortOption);
+  }, [catalog, filters, searchQuery, favorites, sortOption]);
 
   // Dynamic Page Title & H1 based on route parameters
   const pageDetails = useMemo(() => {
@@ -174,6 +187,32 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <X className="w-5 h-5" />
               </button>
             )}
+          </div>
+
+          {/* Sort Dropdown */}
+          <div className="relative flex-shrink-0">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-warm-muted-light/60 dark:text-warm-muted-dark/60">
+              <ArrowUpDown className="w-4 h-4" />
+            </div>
+            <select
+              id="sort-select"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value as SortOption)}
+              className="appearance-none pl-10 pr-10 py-3.5 bg-warm-surface-light/50 dark:bg-warm-surface-dark/50 border border-warm-border-light/40 dark:border-warm-border-dark/40 rounded-full text-sm text-warm-text-light dark:text-warm-text-dark focus:outline-none focus:border-warm-accent-light dark:focus:border-warm-accent-dark transition-all cursor-pointer"
+              aria-label="Sort apps"
+            >
+              {SORT_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+            {/* Custom dropdown arrow */}
+            <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-warm-muted-light/60 dark:text-warm-muted-dark/60">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
 
           {/* Mobile Filter Toggle */}

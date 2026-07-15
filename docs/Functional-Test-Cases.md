@@ -103,6 +103,47 @@ This specification document outlines functional test cases at the UI and feature
 *   **Expected Result:** Focus ring is clearly visible on each checkbox. Pressing Spacebar toggles the checkbox state and triggers client-side filter updates instantly.
 *   **Priority:** High
 
+### Feature: Sort Dropdown
+*   **Test Case ID:** FT-SORT-01
+*   **Preconditions:** User is on the Homepage directory. Sort dropdown is set to "Default".
+*   **Steps:**
+    1. Observe the order of App Cards in the grid.
+*   **Expected Result:** The cards display in the original order defined in `apps.json` (the default catalog sequence).
+*   **Priority:** High
+
+*   **Test Case ID:** FT-SORT-02
+*   **Preconditions:** User is on the Homepage directory with multiple app cards visible.
+*   **Steps:**
+    1. Click the Sort dropdown.
+    2. Select "Name (A → Z)".
+    3. Observe the card grid.
+*   **Expected Result:** The App Cards reorder alphabetically by name in ascending order (e.g., BlockCraft, Chess, FlashLearn, Gomoku, ...).
+*   **Priority:** High
+
+*   **Test Case ID:** FT-SORT-03
+*   **Preconditions:** Sort dropdown is set to "Name (A → Z)".
+*   **Steps:**
+    1. Change the Sort dropdown to "Name (Z → A)".
+    2. Observe the card grid.
+*   **Expected Result:** The App Cards reorder alphabetically by name in descending order (e.g., Word Search, Uno, Sudoku, ...).
+*   **Priority:** High
+
+*   **Test Case ID:** FT-SORT-04
+*   **Preconditions:** Sort dropdown is set to a non-default option (e.g., "Name (A → Z)").
+*   **Steps:**
+    1. Click the "Reset All" button in the Filter Panel or the "Reset All Filters" button.
+    2. Observe the Sort dropdown and card grid.
+*   **Expected Result:** The Sort dropdown resets to "Default" and the card grid returns to the original `apps.json` catalog order.
+*   **Priority:** High
+
+*   **Test Case ID:** FT-SORT-05
+*   **Preconditions:** User has active filters applied (e.g., Type: "Game") and cards are visible.
+*   **Steps:**
+    1. Select "Recently Updated" from the Sort dropdown.
+    2. Observe the card grid.
+*   **Expected Result:** Only the filtered subset of cards (matching the active filters) is displayed, and within that subset, the cards are sorted by `updatedAt` date in descending order (most recently updated first).
+*   **Priority:** High
+
 ---
 
 ## 3. App Card Interactions
