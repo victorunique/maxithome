@@ -33,6 +33,11 @@ export const AppDetailView: React.FC<AppDetailViewProps> = ({
     }
   }, [app, catalog, navigate]);
 
+  // Scroll to top when app ID changes
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   const isFavorite = useMemo(() => {
     return app ? favorites.includes(app.id) : false;
   }, [app, favorites]);
