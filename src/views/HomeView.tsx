@@ -235,30 +235,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
             />
           </div>
 
-          {/* Mobile Drawer Filter Panel */}
-          {mobileFilterOpen && (
-            <div className="fixed inset-0 z-50 lg:hidden bg-black/60 backdrop-blur-sm flex justify-end">
-              <div className="w-80 h-full overflow-y-auto bg-warm-bg-light dark:bg-warm-bg-dark border-l border-warm-border-light/20 dark:border-warm-border-dark/20 p-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-lg font-bold">Filters</h3>
-                    <button
-                      onClick={() => setMobileFilterOpen(false)}
-                      className="p-1 rounded-full text-warm-muted-light dark:text-warm-muted-dark hover:text-warm-text-light dark:hover:text-warm-text-dark"
-                    >
-                      <X className="w-6 h-6" />
-                    </button>
-                  </div>
-                  <FilterPanel
-                    filters={filters}
-                    onChange={handleFilterChange}
-                    onReset={handleResetFilters}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Cards Directory Grid */}
           <div className="lg:col-span-3">
             {filteredApps.length > 0 ? (
@@ -296,6 +272,37 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </div>
       </main>
+
+      {/* Mobile Drawer Filter Panel */}
+      {mobileFilterOpen && (
+        <div
+          onClick={() => setMobileFilterOpen(false)}
+          className="fixed inset-0 z-[100] lg:hidden bg-black/60 backdrop-blur-sm flex justify-end"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-80 h-full overflow-y-auto bg-warm-bg-light dark:bg-warm-bg-dark border-l border-warm-border-light/20 dark:border-warm-border-dark/20 p-6 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-lg font-bold">Filters</h3>
+                <button
+                  onClick={() => setMobileFilterOpen(false)}
+                  aria-label="Close filters"
+                  className="p-1 rounded-full text-warm-muted-light dark:text-warm-muted-dark hover:text-warm-text-light dark:hover:text-warm-text-dark"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <FilterPanel
+                filters={filters}
+                onChange={handleFilterChange}
+                onReset={handleResetFilters}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

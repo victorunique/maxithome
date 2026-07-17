@@ -84,4 +84,34 @@ describe('Header & HomeView Modifications', () => {
     const textElement = screen.queryByText(newTagline);
     expect(textElement).toBeTruthy();
   });
+
+  it('renders mobile filter drawer with z-[100] when mobile filters button is clicked', async () => {
+    const { fireEvent } = await import('@testing-library/react');
+    render(
+      <HelmetProvider>
+        <SettingsProvider>
+          <BrowserRouter>
+            <HomeView
+              catalog={mockCatalog}
+              favorites={[]}
+              toggleFavorite={() => {}}
+              showFavoritesOnly={false}
+              setShowFavoritesOnly={() => {}}
+            />
+          </BrowserRouter>
+        </SettingsProvider>
+      </HelmetProvider>
+    );
+
+    const toggleButton = screen.getByRole('button', { name: /filters/i });
+    fireEvent.click(toggleButton);
+
+    const closeButton = screen.getByRole('button', { name: /close filters/i });
+    expect(closeButton).toBeDefined();
+    
+    const overlay = closeButton.closest('.fixed');
+    expect(overlay).toBeDefined();
+    expect(overlay?.className).toContain('z-[100]');
+  });
 });
+
