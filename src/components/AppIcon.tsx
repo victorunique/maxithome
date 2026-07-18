@@ -32,6 +32,8 @@ export const AppIcon: React.FC<AppIconProps> = ({ id, className = 'w-6 h-6' }) =
         return Icons.Gem;
       case 'block-craft':
         return Icons.Box;
+      case 'sky-scape':
+        return Icons.Plane;
       default:
         return Icons.HelpCircle;
     }
@@ -64,6 +66,8 @@ export const AppIcon: React.FC<AppIconProps> = ({ id, className = 'w-6 h-6' }) =
         return 'bg-pink-500/10 text-pink-500 dark:text-pink-400';
       case 'block-craft':
         return 'bg-emerald-500/10 text-emerald-500 dark:text-emerald-400';
+      case 'sky-scape':
+        return 'bg-sky-500/10 text-sky-500 dark:text-sky-400';
       default:
         return 'bg-slate-500/10 text-slate-500';
     }

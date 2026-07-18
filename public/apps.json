@@ -251,5 +251,28 @@
       "difficulty": ["Beginner", "Intermediate", "Advanced"],
       "age": ["8+", "12+", "Adult"]
     }
+  },
+  {
+    "id": "sky-scape",
+    "name": "Sky Scape",
+    "subdomain": "https://sky-scape.maxithome.com/",
+    "icon": "/icons/sky-scape.png",
+    "shortDescription": "Infinite generative FPV drone flight simulator and cinematic landscape explorer.",
+    "longDescription": "Sky Scape is an asset-light, pure-frontend FPV drone flight simulation and scenic landscape explorer. Cruising through procedurally generated endless natural terrains—forests, deserts, snowlands, and coastlines—players experience realistic flight physics, customizable cinematic camera damping, and an interactive controller calibration wizard, all running smoothly in the browser.",
+    "howToUse": "1. Move using keyboard W/A/S/D keys for pitch/roll, Q/E to change altitude, and mouse to rotate view/yaw. Alternatively, use touchscreen dual joysticks or map a physical USB/FPV controller using the Calibration Wizard.\n2. Adjust cruise speed and camera damping in the settings panel to customize flight physics.\n3. Switch biomes between Forest, Desert, Snowland, and Coastline to discover new landscapes.\n4. Check controller calibrations and rates to optimize the cinematic flight path.",
+    "screenshots": [
+      "/screenshots/sky-scape-1.jpg",
+      "/screenshots/sky-scape-2.jpg"
+    ],
+    "featured": true,
+    "new": true,
+    "createdAt": "2026-07-18",
+    "updatedAt": "2026-07-18",
+    "tags": {
+      "type": ["Game"],
+      "skills": ["Spatial", "Focus", "Attention", "Decision Making"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
+      "age": ["8+", "12+", "Adult", "Senior Friendly"]
+    }
   }
 ]
