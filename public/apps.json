@@ -25,11 +25,11 @@
   {
     "id": "maths-quest",
     "name": "Maths Quest",
-    "subdomain": "https://victorunique.github.io/maths_quest",
+    "subdomain": "https://math-quest.maxithome.com/",
     "icon": "/icons/maths-quest.png",
-    "shortDescription": "Challenge your arithmetic speed and accuracy in a gamified environment.",
-    "longDescription": "Maths Quest challenges your arithmetic speed, numerical agility, and calculation accuracy in a gamified quest environment. Solve increasingly complex math challenges under time pressure to sharpen your mental math capabilities.",
-    "howToUse": "1. Choose a difficulty level and operation type (addition, subtraction, multiplication, or division).\n2. Solve the equations displayed on screen as quickly as possible.\n3. Input your answers before the timer runs out to gain points and progress through levels.\n4. Review your accuracy dashboard at the end of each quest.",
+    "shortDescription": "A curriculum-aligned, gamified arithmetic practice web app for Irish primary school pupils (ages 4–12).",
+    "longDescription": "Maths Quest is a child-friendly, zero-pressure arithmetic practice web app designed specifically for primary school pupils in Ireland (ages 4–12). Aligned with the Irish Primary Mathematics Curriculum (PMC) Number Strand, it offers multi-profile management, untimed Focus Mode, timed Blitz Mode sprints, a custom on-screen numeric keyboard, and a local Star Shop where kids can spend earned stars on cute avatars and themes—all running 100% client-side with full offline reliability.",
+    "howToUse": "1. Select or create a pupil profile (supporting up to 6 profiles plus Guest Mode).\n2. Choose a curriculum stage (Stage 1 to 4, mapped to Irish class levels from Junior Infants to 6th Class).\n3. Select a game mode: Focus Mode for untimed practice or Blitz Mode for a 60-second timed sprint.\n4. Solve equations using the custom on-screen numeric keyboard. Earn stars to purchase new avatars and color themes in the Star Shop.",
     "screenshots": [
       "/screenshots/maths-quest-1.png",
       "/screenshots/maths-quest-2.png"
@@ -37,7 +37,7 @@
     "featured": true,
     "new": false,
     "createdAt": "2025-03-01",
-    "updatedAt": "2026-05-20",
+    "updatedAt": "2026-07-19",
     "tags": {
       "type": ["Game", "Learning"],
       "skills": ["Mathematics", "Processing Speed"],
