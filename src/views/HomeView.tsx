@@ -11,7 +11,6 @@ import { sortCatalog } from '../utils/sortCatalog';
 import type { SortOption } from '../utils/sortCatalog';
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
-  { value: 'default', label: 'Default' },
   { value: 'name-asc', label: 'Name (A → Z)' },
   { value: 'name-desc', label: 'Name (Z → A)' },
   { value: 'date-newest', label: 'Recently Updated' },
@@ -48,7 +47,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
     ...DEFAULT_FILTERS,
     showFavoritesOnly,
   });
-  const [sortOption, setSortOption] = useState<SortOption>('default');
+  const [sortOption, setSortOption] = useState<SortOption>('date-newest');
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   // Sync favorites only toggle from props
@@ -95,7 +94,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
     setFilters({ ...DEFAULT_FILTERS, showFavoritesOnly: false });
     setShowFavoritesOnly(false);
     setSearchQuery('');
-    setSortOption('default');
+    setSortOption('date-newest');
   };
 
   // Filtered and sorted applications

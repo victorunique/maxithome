@@ -93,7 +93,7 @@ graph TD
 |  HUMAN INTELLIGENCE, AUGMENTED             |
 |  +---------------------------------------+ |
 |  | [ Search cognitive apps...          ] | |
-|  | [Sort ▾ Default            ]          | |
+|  | [Sort ▾ Recently Updated    ]          | |
 |  +---------------------------------------+ |
 |  | Active Filters: [Game x]              | |
 |  +---------------------------------------+ |

@@ -187,7 +187,6 @@ After filtering, results are sorted based on the user's selected sort option fro
 
 | Sort Option | Key | Logic |
 |---|---|---|
-| Default | `default` | Preserves original `apps.json` catalog order |
 | Name (A → Z) | `name-asc` | Alphabetical ascending by `name` field |
 | Name (Z → A) | `name-desc` | Alphabetical descending by `name` field |
 | Recently Updated | `date-newest` | Descending by `updatedAt` ISO date field |

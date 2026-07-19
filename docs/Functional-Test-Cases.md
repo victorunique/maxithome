@@ -105,10 +105,10 @@ This specification document outlines functional test cases at the UI and feature
 
 ### Feature: Sort Dropdown
 *   **Test Case ID:** FT-SORT-01
-*   **Preconditions:** User is on the Homepage directory. Sort dropdown is set to "Default".
+*   **Preconditions:** User is on the Homepage directory. Sort dropdown is set to "Recently Updated" by default.
 *   **Steps:**
     1. Observe the order of App Cards in the grid.
-*   **Expected Result:** The cards display in the original order defined in `apps.json` (the default catalog sequence).
+*   **Expected Result:** The cards display sorted by `updatedAt` date in descending order (most recently updated first).
 *   **Priority:** High
 
 *   **Test Case ID:** FT-SORT-02
@@ -133,7 +133,7 @@ This specification document outlines functional test cases at the UI and feature
 *   **Steps:**
     1. Click the "Reset All" button in the Filter Panel or the "Reset All Filters" button.
     2. Observe the Sort dropdown and card grid.
-*   **Expected Result:** The Sort dropdown resets to "Default" and the card grid returns to the original `apps.json` catalog order.
+*   **Expected Result:** The Sort dropdown resets to "Recently Updated" and the card grid returns to sorting by `updatedAt` date descending (most recently updated first).
 *   **Priority:** High
 
 *   **Test Case ID:** FT-SORT-05

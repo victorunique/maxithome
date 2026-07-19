@@ -1,7 +1,6 @@
 import type { CognitiveApp } from '../types';
 
 export type SortOption =
-  | 'default'
   | 'name-asc'
   | 'name-desc'
   | 'date-newest'
@@ -15,9 +14,6 @@ export function sortCatalog(
   apps: CognitiveApp[],
   sortOption: SortOption
 ): CognitiveApp[] {
-  if (sortOption === 'default') {
-    return [...apps];
-  }
 
   const sorted = [...apps];
 

@@ -60,11 +60,6 @@ const mockCatalog: CognitiveApp[] = [
 ];
 
 describe('sortCatalog', () => {
-  it('preserves original order when sort option is "default"', () => {
-    const result = sortCatalog(mockCatalog, 'default');
-    expect(result.map((a) => a.id)).toEqual(['chess', 'flashlearn', 'sudoku']);
-  });
-
   it('sorts alphabetically A→Z by name when sort option is "name-asc"', () => {
     const result = sortCatalog(mockCatalog, 'name-asc');
     expect(result.map((a) => a.name)).toEqual(['Chess', 'FlashLearn', 'Sudoku']);

@@ -113,5 +113,30 @@ describe('Header & HomeView Modifications', () => {
     expect(overlay).toBeDefined();
     expect(overlay?.className).toContain('z-[100]');
   });
+
+  it('defaults sort option to "date-newest" (Recently Updated) and does not contain "default" option', () => {
+    render(
+      <HelmetProvider>
+        <SettingsProvider>
+          <BrowserRouter>
+            <HomeView
+              catalog={mockCatalog}
+              favorites={[]}
+              toggleFavorite={() => {}}
+              showFavoritesOnly={false}
+              setShowFavoritesOnly={() => {}}
+            />
+          </BrowserRouter>
+        </SettingsProvider>
+      </HelmetProvider>
+    );
+
+    const sortSelect = screen.getByLabelText(/sort apps/i) as HTMLSelectElement;
+    expect(sortSelect.value).toBe('date-newest');
+
+    const options = Array.from(sortSelect.options).map(opt => opt.value);
+    expect(options).not.toContain('default');
+    expect(options).toContain('date-newest');
+  });
 });
 
