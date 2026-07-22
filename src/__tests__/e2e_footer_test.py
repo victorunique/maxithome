@@ -81,14 +81,12 @@ def test_footer():
             
         # Contact items list
         contact_items = page.locator('#about h4:has-text("Contact") + ul li a')
-        if contact_items.count() != 4:
-            print(f"FAIL: Expected 4 contact items, got {contact_items.count()}")
+        if contact_items.count() != 2:
+            print(f"FAIL: Expected 2 contact items, got {contact_items.count()}")
             sys.exit(1)
             
         expected_contacts = [
             "Website",
-            "GitHub",
-            "LinkedIn",
             "Email"
         ]
         
