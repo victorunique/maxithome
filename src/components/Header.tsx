@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Sun, Moon, Heart, Type, Menu, X } from 'lucide-react';
-import { useSettings } from '../context/SettingsContext';
+import { useSettings } from '../hooks/useSettings';
 
 interface HeaderProps {
   showFavoritesOnly?: boolean;

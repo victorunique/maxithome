@@ -274,5 +274,28 @@
       "difficulty": ["Beginner", "Intermediate", "Advanced"],
       "age": ["8+", "12+", "Adult", "Senior Friendly"]
     }
+  },
+  {
+    "id": "talkdrill",
+    "name": "TalkDrill",
+    "subdomain": "https://talkdrill.maxithome.com/",
+    "icon": "/icons/talkdrill.svg",
+    "shortDescription": "High-intensity foreign language shadowing and muscle memory overlearning workspace.",
+    "longDescription": "TalkDrill is a client-centric, offline-first web application designed for high-intensity foreign language shadowing and muscle memory overlearning (300 to 500 repetitions). Utilizing traditional Chinese Zheng tally counting (5 strokes per character), zero-latency blind-key operation, and paper-digital dual-track printing sheets, it empowers language learners to break native tongue muscular habits and achieve effortless spoken fluency entirely in the browser with full privacy.",
+    "howToUse": "1. Import foreign sentences or draft your source text to generate idiomatic spoken translations.\n2. Play native reference audio with pitch-preserving variable speeds (0.5x-1.5x) or precise A-B segment loops.\n3. Shadow aloud and tap Spacebar (or the mobile touch capsule) to register repetitions (+1) with real-time Zheng tally progress toward 300-500 rep milestones.\n4. Use hotkey lookups for instant dictionary definitions, or export clean 60/100-grid sheets for offline paper practice.",
+    "screenshots": [
+      "/screenshots/talkdrill-1.png",
+      "/screenshots/talkdrill-2.png"
+    ],
+    "featured": true,
+    "new": true,
+    "createdAt": "2026-10-06",
+    "updatedAt": "2026-10-06",
+    "tags": {
+      "type": ["Tool", "Learning"],
+      "skills": ["Language", "Memory", "Focus"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
+      "age": ["12+", "Adult"]
+    }
   }
 ]

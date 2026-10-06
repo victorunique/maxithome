@@ -6,75 +6,44 @@ interface AppIconProps {
   className?: string;
 }
 
+const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
+  flashlearn: Icons.Languages,
+  'maths-quest': Icons.Calculator,
+  herbert: Icons.Bot,
+  'word-search': Icons.Search,
+  sudoku: Icons.Grid3X3,
+  chess: Icons.Crown,
+  gomoku: Icons.CircleDot,
+  jigsaw: Icons.Puzzle,
+  uno: Icons.Layers,
+  'match-3': Icons.Gem,
+  'block-craft': Icons.Box,
+  'sky-scape': Icons.Plane,
+  talkdrill: Icons.Speech,
+};
+
+const BG_STYLE_MAP: Record<string, string> = {
+  flashlearn: 'bg-orange-500/10 text-orange-500 dark:text-orange-400',
+  'maths-quest': 'bg-cyan-500/10 text-cyan-500 dark:text-cyan-400',
+  herbert: 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400',
+  'word-search': 'bg-green-500/10 text-green-500 dark:text-green-400',
+  sudoku: 'bg-blue-500/10 text-blue-500 dark:text-blue-400',
+  chess: 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400',
+  gomoku: 'bg-slate-700/10 text-slate-600 dark:text-slate-300',
+  jigsaw: 'bg-purple-500/10 text-purple-500 dark:text-purple-400',
+  uno: 'bg-red-500/10 text-red-500 dark:text-red-400',
+  'match-3': 'bg-pink-500/10 text-pink-500 dark:text-pink-400',
+  'block-craft': 'bg-emerald-500/10 text-emerald-500 dark:text-emerald-400',
+  'sky-scape': 'bg-sky-500/10 text-sky-500 dark:text-sky-400',
+  talkdrill: 'bg-blue-600/10 text-blue-600 dark:text-blue-400',
+};
+
 export const AppIcon: React.FC<AppIconProps> = ({ id, className = 'w-6 h-6' }) => {
-  // Map app ID to Lucide icon component
-  const getIcon = () => {
-    switch (id) {
-      case 'flashlearn':
-        return Icons.Languages;
-      case 'maths-quest':
-        return Icons.Calculator;
-      case 'herbert':
-        return Icons.Bot;
-      case 'word-search':
-        return Icons.Search;
-      case 'sudoku':
-        return Icons.Grid3X3;
-      case 'chess':
-        return Icons.Crown;
-      case 'gomoku':
-        return Icons.CircleDot;
-      case 'jigsaw':
-        return Icons.Puzzle;
-      case 'uno':
-        return Icons.Layers;
-      case 'match-3':
-        return Icons.Gem;
-      case 'block-craft':
-        return Icons.Box;
-      case 'sky-scape':
-        return Icons.Plane;
-      default:
-        return Icons.HelpCircle;
-    }
-  };
-
-  const IconComponent = getIcon();
-
-  // Get matching warm color backgrounds from existing index.html classes
-  const getBgStyle = () => {
-    switch (id) {
-      case 'flashlearn':
-        return 'bg-orange-500/10 text-orange-500 dark:text-orange-400';
-      case 'maths-quest':
-        return 'bg-cyan-500/10 text-cyan-500 dark:text-cyan-400';
-      case 'herbert':
-        return 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400';
-      case 'word-search':
-        return 'bg-green-500/10 text-green-500 dark:text-green-400';
-      case 'sudoku':
-        return 'bg-blue-500/10 text-blue-500 dark:text-blue-400';
-      case 'chess':
-        return 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400';
-      case 'gomoku':
-        return 'bg-slate-700/10 text-slate-600 dark:text-slate-300';
-      case 'jigsaw':
-        return 'bg-purple-500/10 text-purple-500 dark:text-purple-400';
-      case 'uno':
-        return 'bg-red-500/10 text-red-500 dark:text-red-400';
-      case 'match-3':
-        return 'bg-pink-500/10 text-pink-500 dark:text-pink-400';
-      case 'block-craft':
-        return 'bg-emerald-500/10 text-emerald-500 dark:text-emerald-400';
-      case 'sky-scape':
-        return 'bg-sky-500/10 text-sky-500 dark:text-sky-400';
-      default:
-        return 'bg-slate-500/10 text-slate-500';
-    }
-  };
+  const IconComponent = ICON_MAP[id] ?? Icons.HelpCircle;
+  const bgStyle = BG_STYLE_MAP[id] ?? 'bg-slate-500/10 text-slate-500';
 
   return (
-    <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${getBgStyle()}`}>
+    <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${bgStyle}`}>
       <IconComponent className={className} />
     </div>
   );

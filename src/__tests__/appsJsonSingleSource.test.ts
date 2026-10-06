@@ -85,5 +85,18 @@ describe('apps.json schema and content validation', () => {
     expect(skyScape.screenshots).toContain('/screenshots/sky-scape-1.jpg');
     expect(skyScape.screenshots).toContain('/screenshots/sky-scape-2.jpg');
   });
+
+  it('should contain the talkdrill app with correct metadata', () => {
+    const apps = JSON.parse(fs.readFileSync(publicAppsJson, 'utf8'));
+    const talkdrill = apps.find((app: any) => app.id === 'talkdrill');
+    expect(talkdrill).toBeDefined();
+    expect(talkdrill.name).toBe('TalkDrill');
+    expect(talkdrill.subdomain).toBe('https://talkdrill.maxithome.com/');
+    expect(talkdrill.icon).toBe('/icons/talkdrill.svg');
+    expect(talkdrill.tags.skills).toContain('Language');
+    expect(talkdrill.tags.skills).toContain('Memory');
+    expect(talkdrill.tags.type).toContain('Tool');
+    expect(talkdrill.tags.type).toContain('Learning');
+  });
 });
 

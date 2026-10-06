@@ -1,17 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getLocalStorageItem, setLocalStorageItem } from '../utils/storage';
-
-export type ThemeMode = 'light' | 'dark';
-export type FontScale = 'normal' | 'large' | 'extra-large';
-
-interface SettingsContextProps {
-  theme: ThemeMode;
-  fontScale: FontScale;
-  toggleTheme: () => void;
-  setFontScale: (scale: FontScale) => void;
-}
-
-const SettingsContext = createContext<SettingsContextProps | undefined>(undefined);
+import { SettingsContext, type ThemeMode, type FontScale } from './settingsContextDef';
 
 export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeMode>(() => {
@@ -62,12 +51,4 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       {children}
     </SettingsContext.Provider>
   );
-};
-
-export const useSettings = () => {
-  const context = useContext(SettingsContext);
-  if (!context) {
-    throw new Error('useSettings must be used within a SettingsProvider');
-  }
-  return context;
 };

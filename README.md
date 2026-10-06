@@ -80,6 +80,9 @@ uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_
 
 # Run footer layout & info refactoring test
 uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- uv run python src/__tests__/e2e_footer_test.py
+
+# Run TalkDrill directory card and detail page test
+uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- uv run python src/__tests__/e2e_talkdrill_test.py
 ```
 
 ---
