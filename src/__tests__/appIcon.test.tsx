@@ -11,6 +11,14 @@ describe('AppIcon component', () => {
     expect(iconWrapper?.className).toContain('text-blue-600');
   });
 
+  it('should render icon container with correct style for xherbert', () => {
+    const { container } = render(<AppIcon id="xherbert" className="w-6 h-6" />);
+    const iconWrapper = container.firstElementChild;
+    expect(iconWrapper).not.toBeNull();
+    expect(iconWrapper?.className).toContain('bg-indigo-500/10');
+    expect(iconWrapper?.className).toContain('text-indigo-500');
+  });
+
   it('should fallback to default style for unknown app id', () => {
     const { container } = render(<AppIcon id="unknown-app" className="w-6 h-6" />);
     const iconWrapper = container.firstElementChild;

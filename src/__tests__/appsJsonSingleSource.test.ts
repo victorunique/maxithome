@@ -98,5 +98,35 @@ describe('apps.json schema and content validation', () => {
     expect(talkdrill.tags.type).toContain('Tool');
     expect(talkdrill.tags.type).toContain('Learning');
   });
+
+  it('should contain the xherbert app with updated metadata and existing screenshot files', () => {
+    const apps = JSON.parse(fs.readFileSync(publicAppsJson, 'utf8'));
+    const oldHerbert = apps.find((app: any) => app.id === 'herbert');
+    expect(oldHerbert).toBeUndefined();
+
+    const xherbert = apps.find((app: any) => app.id === 'xherbert');
+    expect(xherbert).toBeDefined();
+    expect(xherbert.name).toBe('XHerbert');
+    expect(xherbert.subdomain).toBe('https://xherbert.maxithome.com/');
+    expect(xherbert.featured).toBe(true);
+    expect(xherbert.new).toBe(true);
+    expect(xherbert.tags.type).toEqual(expect.arrayContaining(['Game', 'Learning']));
+    expect(xherbert.tags.skills).toEqual(
+      expect.arrayContaining(['Logic', 'Reasoning', 'Executive Function', 'Creativity'])
+    );
+    expect(xherbert.tags.difficulty).toEqual(
+      expect.arrayContaining(['Beginner', 'Intermediate', 'Advanced'])
+    );
+    expect(xherbert.screenshots).toEqual([
+      '/screenshots/xherbert-1.png',
+      '/screenshots/xherbert-2.png',
+      '/screenshots/xherbert-3.png',
+    ]);
+
+    xherbert.screenshots.forEach((relPath: string) => {
+      const fullPath = path.join(rootDir, 'public', relPath);
+      expect(fs.existsSync(fullPath)).toBe(true);
+    });
+  });
 });
 

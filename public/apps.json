@@ -46,25 +46,26 @@
     }
   },
   {
-    "id": "herbert",
-    "name": "Herbert",
-    "subdomain": "https://victorunique.github.io/herbert",
-    "icon": "/icons/herbert.png",
-    "shortDescription": "A programming puzzle game. Guide the robot using logic and commands.",
-    "longDescription": "Herbert is a programming puzzle game designed to exercise your logical thinking and executive planning functions. Guide a robot through complex mazes and obstacles by writing sequences of movement commands and loops.",
-    "howToUse": "1. Analyze the grid layout and the robot's target destination.\n2. Write a sequential list of commands (forward, turn left, turn right, loops) to define the robot's path.\n3. Click 'Run' to execute the instructions and watch the robot move.\n4. Optimize your code command length to achieve maximum star ratings.",
+    "id": "xherbert",
+    "name": "XHerbert",
+    "subdomain": "https://xherbert.maxithome.com/",
+    "icon": "/icons/xherbert.png",
+    "shortDescription": "An algorithmic programming puzzle game in H-Lang. Guide Herbert with procedures, recursion, and higher-order macros.",
+    "longDescription": "XHerbert is a modern algorithmic programming puzzle game built around H-Lang, a minimalist code-golfing language designed to sharpen logical reasoning, recursion thinking, and executive planning. Guide Herbert across grid arenas (25x25 up to 35x25) to light up every White Button (w) while using Walls (*) for alignment and navigating around Gray Button Traps (g) that reset all lit buttons.\n\nBeyond primitive moves (s, l, r), H-Lang rewards concise abstractions: define reusable procedures, leverage endless tail recursion with instant victory, control exact distances with numeric parameters and the <= 0 automatic stop rule, and pass entire command sequences as higher-order macro arguments to generate fractal spirals in as few as 9 bytes. XHerbert includes a 5-Minute Quick-Start interactive tutorial with an official H-Lang Cheat Sheet, a 4-chapter campaign (9 puzzles), a live recursion call stack debugger, and a Create mode custom level editor (25x25 to 40x40) with symmetry brushes and .txt import/export.",
+    "howToUse": "1. Open the Learn tab for the 5-Minute Quick-Start Tutorial and H-Lang Cheat Sheet to master primitives (s: step forward, l: turn left, r: turn right), Walls (*), and Gray Button Traps (g).\n2. Write your H program in the editor (or use the on-screen token keypad) to light up all White Buttons (w) within the level's byte budget.\n3. Compress solutions with procedures (e.g., a:ssra), numeric recursion using the <= 0 stop rule (e.g., a(X):sa(X-1)), and higher-order command arguments (e.g., a(X):Xra(Xs)).\n4. Run, step backward/forward, or use Instant execution while inspecting token byte costs and the Live Recursion Call Stack.\n5. Progress through all 4 chapters (9 puzzles) or switch to the Create tab to design, symmetry-paint, test, and export your own custom levels.",
     "screenshots": [
-      "/screenshots/herbert-1.png",
-      "/screenshots/herbert-2.png"
+      "/screenshots/xherbert-1.png",
+      "/screenshots/xherbert-2.png",
+      "/screenshots/xherbert-3.png"
     ],
-    "featured": false,
-    "new": false,
+    "featured": true,
+    "new": true,
     "createdAt": "2025-04-10",
-    "updatedAt": "2026-01-15",
+    "updatedAt": "2026-11-19",
     "tags": {
       "type": ["Game", "Learning"],
-      "skills": ["Logic", "Reasoning", "Executive Function"],
-      "difficulty": ["Intermediate", "Advanced"],
+      "skills": ["Logic", "Reasoning", "Executive Function", "Creativity"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
       "age": ["12+", "Adult"]
     }
   },

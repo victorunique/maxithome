@@ -9,7 +9,7 @@ interface AppIconProps {
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   flashlearn: Icons.Languages,
   'maths-quest': Icons.Calculator,
-  herbert: Icons.Bot,
+  xherbert: Icons.Bot,
   'word-search': Icons.Search,
   sudoku: Icons.Grid3X3,
   chess: Icons.Crown,
@@ -25,7 +25,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 const BG_STYLE_MAP: Record<string, string> = {
   flashlearn: 'bg-orange-500/10 text-orange-500 dark:text-orange-400',
   'maths-quest': 'bg-cyan-500/10 text-cyan-500 dark:text-cyan-400',
-  herbert: 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400',
+  xherbert: 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400',
   'word-search': 'bg-green-500/10 text-green-500 dark:text-green-400',
   sudoku: 'bg-blue-500/10 text-blue-500 dark:text-blue-400',
   chess: 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400',
