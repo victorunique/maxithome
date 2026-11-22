@@ -298,5 +298,29 @@
       "difficulty": ["Beginner", "Intermediate", "Advanced"],
       "age": ["12+", "Adult"]
     }
+  },
+  {
+    "id": "type-orbit",
+    "name": "Type Orbit",
+    "subdomain": "https://typeorbit.maxithome.com/",
+    "icon": "/icons/type-orbit.png",
+    "shortDescription": "Bilingual English (WPM) & Chinese (CPM) typing practice workspace with curated passages, timed sprints, focus flow, and local analytics.",
+    "longDescription": "Type Orbit is a modern, local-first typing practice web app designed to help you find your rhythm and beat your personal best in both English (WPM) and Simplified Chinese (CPM). Running 100% privately in your browser with multi-profile local storage, it combines a 240-passage bilingual library, daily practice goals and quests, and real-time speed, accuracy, and combo feedback.\n\nPractice across four dedicated modes: Passage for complete curated texts, Time for 15s-120s speed sprints, Focus for distraction-free flow without live counters, and Custom for pasting your own notes or uploading .txt and .md files with automatic long-text segmentation. Every session produces detailed Net/Raw speed and error timeline charts alongside an 8-week activity heatmap, 16 achievements, and a local leaderboard.",
+    "howToUse": "1. Switch between English (WPM) and Chinese (CPM) on the Play dashboard and set your daily practice goal.\n2. Choose a mode: Passage for full curated texts, Time for 15s-120s sprints, Focus for minimal distraction-free typing, or Custom to paste or upload .txt/.md files.\n3. Type along with live speed, accuracy, and combo tracking. By default, mistyped characters prompt a Backspace correction before continuing (configurable in Settings).\n4. Review your Net/Raw speed curve, consistency, and error timeline after each session, and track long-term growth in Leaderboard and Progress.\n5. Browse the 240-passage bilingual Library by category or difficulty, customize themes and caret styles, or export/import your local JSON data anytime.",
+    "screenshots": [
+      "/screenshots/type-orbit-1.png",
+      "/screenshots/type-orbit-2.png",
+      "/screenshots/type-orbit-3.png"
+    ],
+    "featured": true,
+    "new": true,
+    "createdAt": "2026-11-22",
+    "updatedAt": "2026-11-22",
+    "tags": {
+      "type": ["Learning", "Tool"],
+      "skills": ["Processing Speed", "Focus", "Attention", "Language"],
+      "difficulty": ["Beginner", "Intermediate", "Advanced"],
+      "age": ["8+", "12+", "Adult", "Senior Friendly"]
+    }
   }
 ]

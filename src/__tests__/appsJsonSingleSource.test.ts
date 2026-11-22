@@ -128,5 +128,36 @@ describe('apps.json schema and content validation', () => {
       expect(fs.existsSync(fullPath)).toBe(true);
     });
   });
+
+  it('should contain the type-orbit app with correct metadata and existing screenshot files', () => {
+    const apps = JSON.parse(fs.readFileSync(publicAppsJson, 'utf8'));
+    const typeOrbit = apps.find((app: { id: string }) => app.id === 'type-orbit');
+    expect(typeOrbit).toBeDefined();
+    expect(typeOrbit.name).toBe('Type Orbit');
+    expect(typeOrbit.subdomain).toBe('https://typeorbit.maxithome.com/');
+    expect(typeOrbit.icon).toBe('/icons/type-orbit.png');
+    expect(typeOrbit.featured).toBe(true);
+    expect(typeOrbit.new).toBe(true);
+    expect(typeOrbit.tags.type).toEqual(expect.arrayContaining(['Learning', 'Tool']));
+    expect(typeOrbit.tags.skills).toEqual(
+      expect.arrayContaining(['Processing Speed', 'Focus', 'Attention', 'Language'])
+    );
+    expect(typeOrbit.tags.difficulty).toEqual(
+      expect.arrayContaining(['Beginner', 'Intermediate', 'Advanced'])
+    );
+    expect(typeOrbit.tags.age).toEqual(
+      expect.arrayContaining(['8+', '12+', 'Adult', 'Senior Friendly'])
+    );
+    expect(typeOrbit.screenshots).toEqual([
+      '/screenshots/type-orbit-1.png',
+      '/screenshots/type-orbit-2.png',
+      '/screenshots/type-orbit-3.png',
+    ]);
+
+    typeOrbit.screenshots.forEach((relPath: string) => {
+      const fullPath = path.join(rootDir, 'public', relPath);
+      expect(fs.existsSync(fullPath)).toBe(true);
+    });
+  });
 });
 

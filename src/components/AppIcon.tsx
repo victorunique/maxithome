@@ -20,6 +20,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   'block-craft': Icons.Box,
   'sky-scape': Icons.Plane,
   talkdrill: Icons.Speech,
+  'type-orbit': Icons.Keyboard,
 };
 
 const BG_STYLE_MAP: Record<string, string> = {
@@ -36,6 +37,7 @@ const BG_STYLE_MAP: Record<string, string> = {
   'block-craft': 'bg-emerald-500/10 text-emerald-500 dark:text-emerald-400',
   'sky-scape': 'bg-sky-500/10 text-sky-500 dark:text-sky-400',
   talkdrill: 'bg-blue-600/10 text-blue-600 dark:text-blue-400',
+  'type-orbit': 'bg-cyan-500/10 text-cyan-500 dark:text-cyan-400',
 };
 
 export const AppIcon: React.FC<AppIconProps> = ({ id, className = 'w-6 h-6' }) => {
