@@ -246,7 +246,7 @@ export const AppDetailView: React.FC<AppDetailViewProps> = ({
                     className="flex items-center space-x-4 p-3 rounded-xl hover:bg-warm-surface-light/60 dark:hover:bg-warm-surface-dark/60 transition-colors duration-200 group"
                   >
                     <AppIcon id={other.id} className="w-5 h-5" />
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="text-sm font-bold text-warm-text-light dark:text-warm-text-dark group-hover:text-warm-accent-light dark:group-hover:text-warm-accent-dark transition-colors duration-200">
                         {other.name}
                       </h4>

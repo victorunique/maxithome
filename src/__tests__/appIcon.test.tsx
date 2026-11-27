@@ -41,4 +41,13 @@ describe('AppIcon component', () => {
     expect(iconWrapper).not.toBeNull();
     expect(iconWrapper?.className).toContain('bg-slate-500/10');
   });
+
+  it('should include shrink-0 so the square icon container never squishes in flex layouts', () => {
+    const { container } = render(<AppIcon id="xherbert" className="w-5 h-5" />);
+    const iconWrapper = container.firstElementChild;
+    expect(iconWrapper).not.toBeNull();
+    expect(iconWrapper?.className).toContain('w-14');
+    expect(iconWrapper?.className).toContain('h-14');
+    expect(iconWrapper?.className).toContain('shrink-0');
+  });
 });

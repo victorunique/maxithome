@@ -47,7 +47,7 @@ export const AppIcon: React.FC<AppIconProps> = ({ id, className = 'w-6 h-6' }) =
   const bgStyle = BG_STYLE_MAP[id] ?? 'bg-slate-500/10 text-slate-500';
 
   return (
-    <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${bgStyle}`}>
+    <div className={`w-14 h-14 shrink-0 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${bgStyle}`}>
       <IconComponent className={className} />
     </div>
   );
