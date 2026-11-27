@@ -89,6 +89,9 @@ uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_
 
 # Run Type Orbit directory card, detail page, and screenshot carousel test
 uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- uv run python src/__tests__/e2e_type_orbit_test.py
+
+# Run Party Nest directory card, detail page, and screenshot carousel test
+uv run python /Users/victorxu/.gemini/config/skills/webapp-testing/scripts/with_server.py --server "npm run dev" --port 5173 -- uv run python src/__tests__/e2e_party_nest_test.py
 ```
 
 ---

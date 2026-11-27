@@ -159,5 +159,32 @@ describe('apps.json schema and content validation', () => {
       expect(fs.existsSync(fullPath)).toBe(true);
     });
   });
+
+  it('should contain the party-nest app with correct metadata and existing screenshot files', () => {
+    const apps = JSON.parse(fs.readFileSync(publicAppsJson, 'utf8'));
+    const partyNest = apps.find((app: { id: string }) => app.id === 'party-nest');
+    expect(partyNest).toBeDefined();
+    expect(partyNest.name).toBe('Party Nest');
+    expect(partyNest.subdomain).toBe('https://party-nest.maxithome.com/');
+    expect(partyNest.icon).toBe('/icons/party-nest.png');
+    expect(partyNest.featured).toBe(true);
+    expect(partyNest.new).toBe(true);
+    expect(partyNest.tags.type).toEqual(expect.arrayContaining(['Tool']));
+    expect(partyNest.tags.skills).toEqual(
+      expect.arrayContaining(['Executive Function', 'Decision Making'])
+    );
+    expect(partyNest.tags.difficulty).toEqual(expect.arrayContaining(['Beginner']));
+    expect(partyNest.tags.age).toEqual(expect.arrayContaining(['Adult']));
+    expect(partyNest.screenshots).toEqual([
+      '/screenshots/party-nest-1.png',
+      '/screenshots/party-nest-2.png',
+      '/screenshots/party-nest-3.png',
+    ]);
+
+    partyNest.screenshots.forEach((relPath: string) => {
+      const fullPath = path.join(rootDir, 'public', relPath);
+      expect(fs.existsSync(fullPath)).toBe(true);
+    });
+  });
 });
 

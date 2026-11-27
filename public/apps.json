@@ -322,5 +322,29 @@
       "difficulty": ["Beginner", "Intermediate", "Advanced"],
       "age": ["8+", "12+", "Adult", "Senior Friendly"]
     }
+  },
+  {
+    "id": "party-nest",
+    "name": "Party Nest",
+    "subdomain": "https://party-nest.maxithome.com/",
+    "icon": "/icons/party-nest.png",
+    "shortDescription": "Mobile-first kids' birthday party invitation, print-ready QR code, and RSVP management workspace with dedicated Host and Invitee modes.",
+    "longDescription": "Party Nest is a full-stack, mobile-first kids' birthday party invitation and RSVP management web application built on Cloudflare Workers and Cloudflare D1. It streamlines the entire party coordination workflow from handing out printed A6 invitation cards to tracking parent replies, drop-off/collection logistics, and sibling headcounts.\n\nIt features two dedicated experiences: Host Mode (/admin) protected by a salted SHA-256 passcode where organizers can manage multiple birthday events, choose from Boys and Girls illustrated themes or upload custom 16:9 header artwork, configure relative RSVP deadlines, export print-ready vector SVG/PNG QR codes, and edit or export guest lists; and Invitee Mode (/invite/:publicToken) where parents can check venue details, download .ics calendar entries, and submit one-time RSVPs for multiple invited children and accompanying siblings without creating an account.",
+    "howToUse": "1. Open Host Mode (/admin) and sign in with the host passcode to create or manage birthday party events.\n2. Configure party details including child's name, age, date, drop-off/collection times, venue map link, sibling policy, and relative RSVP deadline.\n3. Pick a Boys or Girls illustrated theme (or upload a custom 16:9 header image) and download the print-ready SVG/PNG QR code for your physical invitation cards.\n4. Share the generated invite link or QR code with parents so they can view Invitee Mode, add the event to their calendar (.ics), and submit one-time RSVPs for their children and siblings.\n5. Monitor live attending/declined counts, edit RSVPs if plans change, or export the roll call to CSV; once the deadline passes, the invite link automatically switches to Read-Only Mode for party-day reference.",
+    "screenshots": [
+      "/screenshots/party-nest-1.png",
+      "/screenshots/party-nest-2.png",
+      "/screenshots/party-nest-3.png"
+    ],
+    "featured": true,
+    "new": true,
+    "createdAt": "2026-11-24",
+    "updatedAt": "2026-11-27",
+    "tags": {
+      "type": ["Tool"],
+      "skills": ["Executive Function", "Decision Making"],
+      "difficulty": ["Beginner"],
+      "age": ["Adult"]
+    }
   }
 ]
